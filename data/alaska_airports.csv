@@ -1,0 +1,651 @@
+code,airport_name,city,latitude,longitude
+01A,Afognak Lake Airport,"Afognak Lake, AK",58.10944444,-152.90666667
+03A,Bear Creek Mining Strip,"Granite Mountain, AK",65.54805556,-161.07166667
+04A,Lik Mining Camp,"Lik, AK",68.08333333,-163.16666667
+05A,Little Squaw Airport,"Little Squaw, AK",67.57,-148.18388889
+05K,Wilder Runway,"Port Alsworth, AK",60.19861111,-154.32305556
+06A,Kizhuyak Bay,"Kizhuyak, AK",57.74527778,-152.88277778
+07A,Klawock Seaplane Base,"Klawock, AK",55.55472222,-133.10166667
+08A,Elizabeth Island Airport,"Elizabeth Island, AK",59.15694444,-151.82916667
+09A,Augustin Island,"Homer, AK",59.36277778,-153.43055556
+4AK,Bradley Sky Ranch,"North Pole, AK",64.75916667,-147.38777778
+5AK,Lawing Airport,"Lawing, AK",60.41194444,-149.36944444
+7AK,Akun Airport,"Akun, AK",54.14472222,-165.60416667
+8AK,Willow Conocophillips,"Nuiqsut, AK",70.11083333,-152.12972222
+9AK,Wolf Lake,"Palmer, AK",61.63944444,-149.28388889
+A01,Blair Lake,"Fairbanks/Ft. Wainwright, AK",64.36361111,-147.36527778
+A02,Deadmans Bay Airport,"Deadmans Bay, AK",57.06666667,-153.93777778
+A03,Hallo Bay Airport,"Hallo Bay, AK",58.4575,-154.02333333
+A04,Red Lake Airport,"Red Lake, AK",57.27722222,-154.34222222
+A05,Shell Lake Airport,"Shell Lake, AK",61.96388889,-151.55583333
+A06,Navigator Airstrip,"Kougarok, AK",65.65555556,-165.35638889
+A07,Roland Norton Memorial,"Selawik, AK",66.76611111,-160.15277778
+A08,Pillar Bay Airport,"Pillar Bay, AK",56.59805556,-134.24277778
+A09,Johnstone Point Airport,"Johnstone Point, AK",60.48166667,-146.58416667
+A11,Bell Creek Airport,"Bell Creek, AK",60.78388889,-159.54027778
+A12,Cinnabar Airport,"Cinnabar, AK",60.78527778,-158.86444444
+A13,Mountaintop Mine Airport,"Mountaintop Mine, AK",61.39027778,-157.99555556
+A14,Whitebear Airport,"Whitebear, AK",61.18888889,-159.85833333
+A16,Arley Lake Airport,"Arley Lake, AK",70.74694444,-155.36083333
+A17,Port Vita Airport,"Port Vita, AK",58.06555556,-153.0725
+A18,Kantishna Airport,"Kantishna, AK",63.54111111,-150.995
+A1K,Point Thomson Airstrip,"Deadhorse1, AK",70.13611111,-146.29
+A20,Alpine Airstrip,"Alpine, AK",70.34416667,-150.94472222
+A21,Serpentine Airport,"Serpentine, AK",65.85138889,-164.70277778
+A22,Driftwood Bay Airport,"Driftwood Bay, AK",53.97277778,-166.85694444
+A23,Bradley Lake Airport,"Bradley Lake, AK",59.77611111,-151.96361111
+A24,Chilkat Lake Airport,"Chilkat Lake, AK",59.33166667,-135.89666667
+A25,Nugget Creek Airport,"Nugget Creek, AK",59.28833333,-136.17388889
+A26,Ivotuk Airstrip,"Ivotuk, AK",68.48333333,-155.73333333
+A27,Pogo Mines Airport,"Pogo Mines, AK",64.44,-144.93638889
+A28,Ayakulik River Airport,"Ayakulik River, AK",57.25388889,-154.42222222
+A29,Kiluda Bay Airport,"Kiluda Bay, AK",57.32305556,-153.14944444
+A30,Terror Lake Airport,"Terror Lake, AK",57.96388889,-153.05833333
+A31,Selief Bay Airport,"Selief Bay, AK",58.98277778,-153.18333333
+A34,Laura Lake Airport,"Laura Lake, AK",58.36194444,-152.31222222
+A35,Bullen Point AFS,"Kaktovik, AK",70.17111111,-146.84416667
+A36,Deep Bay Airport,"Deep Bay, AK",55.56027778,-131.65555556
+A37,Kako Airport,"Kako, AK",61.89888889,-161.43972222
+A38,Molly Creek Airport,"Molly Creek, AK",64.09722222,-143.26666667
+A39,Ptarmigan Lake Airport,"Ptarmigan Lake, AK",61.86611111,-141.15972222
+A3K,Smith Bay Airport,"Smith Bay, AK",70.76583333,-154.23083333
+A40,Cape Simpson Airport,"Cape Simpson, AK",71.05694444,-154.72833333
+A42,Teshepkuk Lake Airport,"Teshepkuk Lake, AK",70.35833333,-153.19666667
+A43,Trident Basin Seaplane Base,"Kodiak Island, AK",57.78083333,-152.39111111
+A45,Lake Florence Airport,"Lake Florence, AK",57.81666667,-134.58333333
+A46,Lake Hasselborg Airport,"Lake Hasselborg, AK",57.7,-134.26666667
+A47,Distin Lake Airport,"Distin Lake, AK",57.61666667,-134.36666667
+A48,Port Hobron Airport,"Port Hobron, AK",57.15,-153.15
+A49,Mooseville Airstrip Airport,"Mooseville Airstrip, AK",70.28444444,-152.21194444
+A4K,Dune Lake Airport,"Dune Lake, AK",64.42138889,-149.89444444
+A50,Big Bay Airport,"Big Bay, AK",58.5625,-152.59611111
+A51,Wien Lake Airport,"Wien Lake, AK",64.35277778,-151.275
+A52,Silver Salmon Creek Airport,"Silver Salmon Creek, AK",59.96388889,-152.68222222
+A53,Blear Lake Airport,"Blear Lake, AK",64.33333333,-147.5
+A54,Cannery Bay Airport,"Cannery Bay, AK",53.68333333,-166.75
+A56,Johnsons Landing,"Bear Lake, AK",56.03666667,-160.26611111
+A57,International Seafoods Airport,"International Seafoods, AK",58.26666667,-157.53333333
+A58,Cosna River Airport,"Cosna River, AK",64.5,-151.66666667
+A59,Ivatuk Airport,"Ivatuk, AK",68.48777778,-155.7575
+A5K,Paxson Airport,"Paxson, AK",63.02444444,-145.50055556
+A61,Cape Sarichef Airport,"Cape Sarichef, AK",54.5825,-164.91444444
+A62,Taylor Mountain,"Taylor Mountain Mine, AK",60.86777778,-157.39194444
+A63,Coal Creek,"Yukon Charley Rivvers, AK",65.31166667,-143.13416667
+A65,Karluk Portage Airport,"Karluk Portage, AK",57.53833333,-154.16444444
+A66,Hope Airport,"Hope, AK",60.90722222,-149.62277778
+A67,Viekoda Bay Airport,"Viekoda Bay, AK",57.84944444,-153.11527778
+A69,Cathedral Strip,"Cold Bay, AK",55.74,-162.12527778
+A6K,Van Curlers Sandbar,"Fairbanks1, AK",65.04472222,-145.42305556
+A70,Village Islands Airport,"Village Islands, AK",57.77416667,-153.54472222
+A71,Bear Cove Farm,"Homer, AK",59.73833333,-151.03
+A72,Chinitna Bay Airport,"Chinitna Bay, AK",59.83333333,-152.58472222
+A73,McKinley National Park,"McKinley Park, AK",63.7325,-148.91055556
+A74,Dog Fish Bay,"Nanwalek, AK",59.24111111,-151.87722222
+A75,Malina Bay Airport,"Malina Bay, AK",58.17194444,-152.89416667
+A76,Red Fox Bay Airport,"Red Fox Bay, AK",58.46444444,-152.59305556
+A77,Shearwater Airport,"Shearwater, AK",57.34333333,-152.89722222
+A78,Lake,"Cape Simpson, AK",71.03,-154.44361111
+A79,Cape Simpson No. 1,"Cape Simpson, AK",71.50166667,-154.03388889
+A7K,Nakochna Airport,"Nakochna, AK",62.03611111,-151.45222222
+A80,Cape Simpson No. 7,"Cape Simpson, AK",70.57388889,-155.32138889
+A81,Cape Simpson #1,"Aglaq, AK",70.66277778,-154.83666667
+A82,Nikiski Private Airstrip,"Nikiski, AK",60.69027778,-151.28888889
+A83,Petrof Point Airport,"Petrof Point, AK",59.37638889,-150.765
+A84,Denali West Lodge Private,"Denali, AK",63.75555556,-147.93
+A85,Big River Airport,"Big River, AK",61.85944444,-154.27666667
+A87,Carry Inlet Airport,"Carry Inlet, AK",58.58305556,-152.44583333
+A89,Montague Island Airport,"Montague Island, AK",59.925,-147.51666667
+A8K,Granite Point Ndb,"Granite Point, AK",60.96166667,-151.33166667
+A90,Shannon Pond Airport,"Shannon Pond, AK",59.03916667,-158.46388889
+A91,Omalik Lagoon Airport,"Omalik Lagoon, AK",69.15555556,-163.49722222
+A92,Omolik Lagoon Airport,"Omolik Lagoon, AK",69.14805556,-163.51027778
+A93,Bradley Lake Project Airport,"Bradley Lake Project, AK",59.79166667,-151.26666667
+A94,Ice Strip,"Barrow, AK",70.57416667,-155.31805556
+A95,Ice Strip,"Barrow, AK",70.31194444,-153.24916667
+A96,Ice Strip,"Barrow, AK",70.98083333,-157.095
+A97,Akulik Air Strip,"Akulik, AK",68.98555556,-163.47972222
+A98,Deadfall Air Strip,"Deadfall, AK",69.17083333,-163.25638889
+A99,Eagle Creek Airport,"Eagle Creek, AK",68.67666667,-162.64694444
+A9K,Temsco Helicopters Inc Heliport,"Healy, AK",63.7375,-148.88277778
+AA1,Ice Kong,"Bethel, AK",59.95277778,-162.61694444
+AA2,Icicle Seafoods,"Naknek-1, AK",58.70944444,-157.07138889
+AA4,Glacier Split,"Kachemak Bay, AK",59.63333333,-151.20833333
+AA5,Selby Lake Airport,"Selby Lake, AK",66.95583333,-155.615
+AA7,Independence Creek Airport,"Independence Creek, AK",65.67361111,-162.46416667
+AA8,Badami,"Deadhorse, AK",70.1375,-147.03055556
+AA9,Napaimute Pioneer Airfield,"Napaimute, AK",61.53638889,-158.73888889
+ABL,Ambler River,"Ambler, AK",67.0875,-157.84583333
+ADK,Adak,"Adak Island, AK",51.88361111,-176.6425
+ADQ,Kodiak Airport,"Kodiak, AK",57.74972222,-152.49388889
+AED,Aleneva Airport,"Aleneva, AK",58.03333333,-152.9
+AET,Allakaket Airport,"Allakaket, AK",66.55194444,-152.62222222
+AFM,Ambler Airport,"Ambler, AK",67.10666667,-157.85722222
+AGN,Angoon Seaplane Base,"Angoon, AK",57.50388889,-134.58333333
+AHT,Amchitka,"Amchitka Island, AK",51.37861111,179.25861111
+AIB,Anita Bay Airport,"Anita Bay, AK",56.19,-132.44583333
+AIN,Wainwright Airport,"Wainwright, AK",70.63805556,-159.99472222
+AK1,Kelly Creek Airstrip,"Seward Peninsula, AK",65.77277778,-165.89027778
+AK2,Bear Fish Camp Airport,"Bear Fish Camp, AK",60.71027778,-151.72111111
+AK3,Gold King Creek,"Fairbanks, AK",64.19805556,-147.92861111
+AK4,Squaw Lake Airport,"Squaw Lake, AK",67.58055556,-148.16472222
+AK5,Qugruc Airport,"Qugruc, AK",70.37027778,-150.42111111
+AK6,Gold King 2 Airport,"Gold King 2, AK",64.07138889,-148.0
+AK7,Hunter Creek Mine,"Rampart, AK",65.47722222,-150.05083333
+AK8,Zips Airport,"Zips, AK",60.43333333,-151.48333333
+AK9,Tolstoi Bay Airport,"Tolstoi Bay, AK",55.73333333,-132.43333333
+AKB,Atka Airport,"Atka, AK",52.22055556,-174.20611111
+AKI,Akiak Airport,"Akiak, AK",60.90277778,-161.23055556
+AKK,Akhiok Airport,"Akhiok, AK",56.93861111,-154.1825
+AKN,King Salmon Airport,"King Salmon, AK",58.67805556,-156.65194444
+AKP,Anaktuvuk Pass Airport,"Anaktuvuk Pass, AK",68.13361111,-151.74333333
+ALZ,Alitak Seaplane Base,"Lazy Bay, AK",56.89583333,-154.24583333
+ANC,Ted Stevens Anchorage International,"Anchorage, AK",61.17416667,-149.99805556
+ANI,Aniak Airport,"Aniak, AK",61.58138889,-159.54527778
+ANN,Annette Island,"Annette, AK",55.04222222,-131.57083333
+ANV,Anvik Airport,"Anvik, AK",62.64722222,-160.19
+AOS,Amook Bay Airport,"Amook Bay, AK",57.45472222,-153.81305556
+AQY,Girdwood Airport,"Girdwood, AK",60.96888889,-149.11944444
+ARC,Arctic Village Airport,"Arctic Village, AK",68.11472222,-145.57944444
+ATK,Atqasuk Edward Burnell Sr. Memorial,"Atqasuk, AK",70.46722222,-157.43555556
+ATT,Atmautluak Airport,"Atmautluak, AK",60.86777778,-162.27416667
+ATU,Casco Cove CGS,"Attu, AK",52.8325,173.17555556
+AUK,Alakanuk Airport,"Alakanuk, AK",62.68305556,-164.72222222
+BCC,Bear Creek Airport,"Bear Creek, AK",57.6175,-155.86722222
+BET,Bethel Airport,"Bethel, AK",60.77861111,-161.83722222
+BFB,Blue Fox Bay Airport,"Blue Fox Bay, AK",58.18333333,-152.13333333
+BGQ,Big Lake Airport,"Big Lake, AK",61.53472222,-149.8125
+BIC,Big Creek Airport,"Big Creek, AK",57.66666667,-157.58333333
+BIG,Allen AAF,"Big Delta, AK",63.99527778,-145.72027778
+BKC,Buckland Airport,"Buckland, AK",65.98166667,-161.14916667
+BKF,Brooks Lake Airport,"Brooks Lake, AK",58.6,-156.23333333
+BMX,Big Mountain AFS,"Big Mountain, AK",59.36222222,-155.25972222
+BNF,Warm Spring Bay Seaplane Base,"Baranof, AK",57.08916667,-134.83138889
+BQV,Bartlett Cove Seaplane Base,"Bartlett Cove, AK",58.45527778,-135.88527778
+BRW,Wiley Post/Will Rogers Memorial,"Barrow, AK",71.28472222,-156.76861111
+BSW,Boswell Bay Airport,"Boswell Bay, AK",60.42305556,-146.14583333
+BTI,Barter Island Airport,"Barter Island, AK",70.11305556,-143.65361111
+BTT,Bettles Airport,"Bettles, AK",66.91388889,-151.52916667
+BVD,Beaver Inlet Seaport,"Beaver Inlet, AK",53.8325,-166.3025
+BVU,Beluga Airport,"Beluga, AK",61.17277778,-151.04277778
+BYA,Boundary Airport,"Boundary, AK",64.07833333,-141.11333333
+CBA,Corner Bay Airport,"Corner Bay, AK",57.73777778,-135.12555556
+CDB,Cold Bay Airport,"Cold Bay, AK",55.20583333,-162.72611111
+CDL,Candle 2,"Candle, AK",65.90777778,-161.92638889
+CDV,Merle K Mudhole Smith,"Cordova, AK",60.49166667,-145.4775
+CEM,Central Airport,"Central, AK",65.57388889,-144.78083333
+CEX,Chena Hot Springs Airport,"Chena Hot Springs, AK",65.05194444,-146.0475
+CFA,Coffee Point Airport,"Coffee Point, AK",58.21666667,-157.5
+CGA,Craig Seaplane Base,"Craig, AK",55.47916667,-133.14611111
+CHP,Circle Hot Springs Airport,"Circle Hot Springs, AK",65.48583333,-144.61166667
+CHU,Chuathbaluk Airport,"Chuathbaluk, AK",61.57916667,-159.21555556
+CIK,Chalkyitsik Airport,"Chalkyitsik, AK",66.645,-143.74
+CIL,Council Airport,"Council, AK",64.89666667,-163.70361111
+CIV,Chomley Airport,"Chomley, AK",55.24777778,-132.32361111
+CJI,Crafton Island Airport,"Crafton Island, AK",60.50277778,-147.94027778
+CKD,Crooked Creek Airport,"Crooked Creek, AK",61.87111111,-158.13805556
+CKU,Cordova Municipal,"Cordova, AK",60.54361111,-145.72583333
+CKX,Chicken Airport,"Chicken, AK",64.06666667,-141.95138889
+CLF,Clear Mews,"Clear, AK",64.30166667,-149.11777778
+CLP,Clarks Point Airport,"Clarks Point, AK",58.83361111,-158.52944444
+CSP,Cape Spencer C.G. Helipad,"Cape Spencer, AK",58.19916667,-136.64
+CXC,Chitina Airport,"Chitina, AK",61.58333333,-144.42972222
+CXF,Coldfoot Airport,"Coldfoot, AK",67.25222222,-150.20388889
+CYF,Chefornak Airport,"Chefornak, AK",60.13694444,-164.27916667
+CYM,Chatham Airport,"Chatham, AK",57.51527778,-134.94444444
+CYT,Yakataga,"Cape Yakataga, AK",60.08083333,-142.49555556
+CZC,Copper Center 2,"Copper Center, AK",61.94111111,-145.29416667
+CZF,Cape Romanzof LRRS,"Cape Romanzof, AK",61.78111111,-166.03944444
+CZN,Chisana Airport,"Chisana, AK",62.07166667,-142.04944444
+CZO,Chistochina Airport,"Chistochina, AK",62.56222222,-144.6725
+CZP,Cape Pole Airport,"Cape Pole, AK",55.965,-133.79333333
+DCK,Dahl Creek Airport,"Dahl Creek, AK",66.9425,-156.89138889
+DGB,Danger Bay Airport,"Danger Bay, AK",58.13333333,-152.55
+DIO,Diomede Heliport,"Diomede Island, AK",65.75861111,-168.95305556
+DJN,Delta Junction Airport,"Delta Junction, AK",64.05,-145.7225
+DLG,Dillingham Airport,"Dillingham, AK",59.04472222,-158.50555556
+DLO,Dolomi Airport,"Dolomi, AK",55.12222222,-132.05
+DNC,Duncan Canal Airport,"Duncan Canal, AK",56.75694444,-133.22166667
+DOF,Dora Bay Airport,"Dora Bay, AK",55.23333333,-132.21666667
+DQH,Alpine Airstrip,"Alpine, AK",70.34416667,-150.94472222
+DQL,Lake Hood,"Anchorage, AK",61.18666667,-149.96527778
+DQU,Neets Bay,"Ketchikan, AK",55.77888889,-131.60138889
+DQV,Glacier Point,"Haines, AK",59.1025,-135.38222222
+DQX,Tsui River Airport,"Tsui River, AK",60.07472222,-143.08666667
+DQZ,Platinum Mine,"Platinum, AK",58.91166667,-161.71388889
+DRF,Drift River Airport,"Drift River, AK",60.58888889,-152.16194444
+DRG,Deering Airport,"Deering, AK",66.06916667,-162.76694444
+DUT,Unalaska Airport,"Unalaska, AK",53.89888889,-166.545
+EAA,Eagle Airport,"Eagle, AK",64.77805556,-141.14972222
+EAG,Eagle Creek Strip,"Noatak, AK",67.56222222,-162.97527778
+EDA,Edna Bay Airport,"Edna Bay, AK",55.93638889,-133.65555556
+EDF,Elmendorf AFB,"Anchorage, AK",61.25138889,-149.80638889
+EEK,Eek Airport,"Eek, AK",60.21361111,-162.04388889
+EFB,Eight Fathom Bight Airport,"Eight Fathom Bight, AK",58.0,-135.73333333
+EGA,Chenega Airport,"Chenega, AK",60.28333333,-148.08333333
+EGX,Egegik Airport,"Egegik, AK",58.18444444,-157.37472222
+EHM,Cape Newenham LRRS,"Cape Newenham, AK",58.64805556,-162.06305556
+EHR,Eagle Harbor Airport,"Eagle Harbor, AK",57.41666667,-152.71666667
+EIL,Eielson AFB,"Fairbanks, AK",64.66555556,-147.10138889
+ELI,Elim Airport,"Elim, AK",64.615,-162.27055556
+ELV,Elfin Cove Seaplane Base,"Elfin Cove, AK",58.2,-136.31666667
+ELW,Ellamar Seaplane Base,"Ellamar, AK",60.89333333,-146.70833333
+EMK,Emmonak Airport,"Emmonak, AK",62.78611111,-164.49083333
+ENA,Kenai Municipal,"Kenai, AK",60.57222222,-151.24722222
+ENN,Nenana Municipal,"Nenana, AK",64.54722222,-149.07388889
+EVC,Eva Creek Airport,"Eva Creek, AK",64.04222222,-148.86277778
+EWU,Newtok,"Mertarvik, AK",60.81027778,-164.44944444
+EXI,Excursion Inlet Seaplane Base,"Excursion Inlet, AK",58.42083333,-135.44722222
+FAI,Fairbanks International,"Fairbanks, AK",64.81527778,-147.85361111
+FAK,False Island Airport,"False Island, AK",57.51666667,-135.21666667
+FAU,Fairmount Island Airport,"Fairmount Island, AK",60.89611111,-147.44666667
+FBK,Ladd AAF,"Fairbanks, AK",64.83666667,-147.61638889
+FIC,Fire Cove Airport,"Fire Cove, AK",55.77777778,-131.5375
+FLJ,Falls Bay Airport,"Falls Bay, AK",60.51666667,-148.0
+FLT,Flat Airport,"Flat, AK",62.45277778,-157.98666667
+FNR,Funter Bay,"Funter Bay Alaska, AK",58.25,-134.9
+FQA,Patching Lake Airport,"Patching Lake, AK",55.60611111,-131.48333333
+FQC,Lilly Lake,"Kodiak, AK",57.80555556,-152.38055556
+FQD,Trident Volcano,"Katmai National Park, AK",58.235,-155.10361111
+FQE,Annex Creek Airport,"Annex Creek, AK",58.31333333,-134.10416667
+FQF,Davidson Creek Airport,"Davidson Creek, AK",58.35277778,-133.99138889
+FQG,Snettisham Airport,"Snettisham, AK",58.13444444,-133.72944444
+FQH,Fire Island Airport,"Fire Island, AK",61.16833333,-150.16055556
+FQJ,Greens Creek Airport,"Greens Creek, AK",58.09861111,-134.76
+FQK,Gull Cove Airport,"Gull Cove, AK",58.21472222,-136.15638889
+FQN,Karta Lake Airport,"Karta Lake, AK",55.56222222,-132.63055556
+FQO,Manzanita Lake Airport,"Manzanita Lake, AK",55.56666667,-131.05638889
+FQP,Shrimp Bay Airport,"Shrimp Bay, AK",55.83444444,-131.48472222
+FQQ,Dry Bay Airport,"Dry Bay, AK",59.14666667,-138.56361111
+FQR,Josephine Lake Airport,"Josephine Lake, AK",55.24361111,-132.57333333
+FQV,Volcano Bay Airport,"Volcano Bay, AK",53.81444444,-167.11944444
+FQW,Fort Glenn Airport,"Fort Glenn, AK",53.36666667,-167.88333333
+FQX,Babe Islands Airport,"Babe Islands, AK",55.21027778,-132.13194444
+FQY,Kahli Cove Airport,"Kahli Cove, AK",55.92638889,-133.25277778
+FRP,Fresh Water Bay Airport,"Fresh Water Bay, AK",57.85,-134.98333333
+FTL,Fortuna Ledge Airport,"Fortuna Ledge, AK",61.86833333,-162.06805556
+FVA,Osprey Lodge Airport,"Osprey Lodge, AK",61.11638889,-155.31138889
+FVQ,Donlin Creek Mine Airport,"Donlin Creek Mine, AK",62.07194444,-158.20416667
+FVW,Golden Creek Mine Airport,"Golden Creek Mine, AK",65.28333333,-153.0
+FVX,Grace Harbor Airport,"Grace Harbor, AK",54.91666667,-132.91666667
+FVY,Unuk River Airport,"Unuk River, AK",56.08333333,-131.96666667
+FVZ,Inigok,"Deadhorse, AK",70.00388889,-153.0775
+FWL,Farewell Airport,"Farewell, AK",62.50916667,-153.89055556
+FYU,Fort Yukon Airport,"Fort Yukon, AK",66.5725,-145.24638889
+GAL,Edward G. Pitka Sr.,"Galena, AK",64.73611111,-156.93444444
+GAM,Gambell Airport,"Gambell, AK",63.76666667,-171.73277778
+GBH,Galbraith Lake Airport,"Galbraith Lake, AK",68.47972222,-149.49
+GDH,Golden Horn Lodge Seaplane Base,"Golden Horn Lodge, AK",59.74694444,-158.87472222
+GEK,Ganes Creek Airport,"Ganes Creek, AK",62.97555556,-156.51333333
+GFB,Togiak Fish Airport,"Togiak Fish, AK",59.05,-160.28333333
+GKN,Gulkana Airport,"Gulkana, AK",62.155,-145.45444444
+GLV,Golovin Airport,"Golovin, AK",64.55055556,-163.00722222
+GMT,Granite Mountain AS,"Granite Mountain, AK",65.40222222,-161.28138889
+GNU,Goodnews,"Goodnews Bay, AK",59.11777778,-161.57361111
+GST,Gustavus Airport,"Gustavus, AK",58.42527778,-135.7075
+HBC,Hanus Bay Airport,"Hanus Bay, AK",57.41666667,-135.03333333
+HBH,Hobart Bay Airport,"Hobart Bay, AK",57.4,-133.46666667
+HBY,Hood Bay Airport,"Hood Bay, AK",57.38194444,-134.39527778
+HCB,Shoal Cove Airport,"Shoal Cove, AK",55.45,-131.28333333
+HCR,Holy Cross Airport,"Holy Cross, AK",62.18833333,-159.775
+HDA,Hidden Falls Airport,"Hidden Falls, AK",57.21666667,-134.88333333
+HED,Herendeen Bay,"Herendeen, AK",55.80138889,-160.89916667
+HGZ,Hogatza Airport,"Hogatza, AK",66.19166667,-155.66888889
+HKB,Healy River,"Healy, AK",63.8675,-148.96888889
+HMS,Homeshore Airport,"Homeshore, AK",58.29444444,-135.34722222
+HNH,Hoonah Airport,"Hoonah, AK",58.09611111,-135.40888889
+HNS,Haines Airport,"Haines, AK",59.24388889,-135.52361111
+HOL,Holikachuk Airport,"Holikachuk, AK",62.91055556,-159.52777778
+HOM,Homer Airport,"Homer, AK",59.64555556,-151.47666667
+HPB,Hooper Bay Airport,"Hooper Bay, AK",61.52388889,-166.14666667
+HSL,Huslia Airport,"Huslia, AK",65.69777778,-156.35138889
+HUS,Hughes Airport,"Hughes, AK",66.03916667,-154.26472222
+HWI,Hawk Inlet Airport,"Hawk Inlet, AK",58.13333333,-134.75
+HYG,Hydaburg Seaplane Base,"Hydaburg, AK",55.20666667,-132.82666667
+HYL,Hollis Seaplane Base,"Hollis, AK",55.48194444,-132.64444444
+IAN,Bob Baker Memorial,"Kiana, AK",66.97611111,-160.43861111
+ICY,Icy Bay Airport,"Icy Bay, AK",59.96888889,-141.66166667
+IGG,Igiugig Airport,"Igiugig, AK",59.32416667,-155.90166667
+IKO,Nikolski AS,"Nikolski, AK",52.94166667,-168.84916667
+ILI,Iliamna Airport,"Iliamna, AK",59.75555556,-154.91777778
+IRC,Circle City,"Circle, AK",65.82805556,-144.07611111
+JLA,Quartz Creek,"Cooper Lodge, AK",60.48416667,-149.72277778
+JNU,Juneau International,"Juneau, AK",58.35472222,-134.57833333
+JSE,Juneau Seaplane Base,"Juneau, AK",58.30166667,-134.42444444
+JZE,Trading Bay Production,"Trading Bay, AK",60.81555556,-151.79888889
+JZM,Hog River Airport,"Hog River, AK",66.17611111,-155.68472222
+KAE,Kake Seaplane Base,"Kake, AK",56.97333333,-133.94388889
+KAL,Kaltag Airport,"Kaltag, AK",64.31888889,-158.74138889
+KBC,Birch Creek Airport,"Birch Creek, AK",66.27444444,-145.81805556
+KBE,Bell Island Hot Springs Seaplane Base,"Bell Island, AK",55.92944444,-131.57
+KBK,Klag Bay Airport,"Klag Bay, AK",57.64472222,-136.09305556
+KCC,Coffman Cove Seaplane Base,"Coffman Cove, AK",56.03333333,-132.91666667
+KCG,Chignik Bay Airport,"Chignik Bay, AK",56.31138889,-158.37333333
+KCL,Chignik Lagoon Airport,"Chignik Lagoon, AK",56.31083333,-158.53444444
+KCN,Chernofski Harbor,"Chernofski, AK",53.4,-167.55
+KCQ,Chignik Lake,"Chignik, AK",56.25555556,-158.77777778
+KCR,Colorado Creek Airport,"Colorado Creek, AK",63.57111111,-156.00527778
+KDK,Kodiak Municipal,"Kodiak, AK",57.80583333,-152.37388889
+KEB,Nanwalek Airport,"Nanwalek, AK",59.35222222,-151.92527778
+KEK,Ekwok Airport,"Ekwok, AK",59.35694444,-157.47111111
+KFP,False Pass Airport,"False Pass, AK",54.84777778,-163.40722222
+KGK,Koliganek Airport,"Koliganek, AK",59.72666667,-157.26027778
+KGX,Grayling Airport,"Grayling, AK",62.89222222,-160.06638889
+KGZ,Glacier Creek Airport,"Glacier Creek, AK",61.455,-142.38083333
+KIB,Ivanof Bay Seaplane Base,"Ivanof Bay, AK",55.9,-159.48333333
+KKA,Koyuk Alfred Adams,"Koyuk, AK",64.93944444,-161.15416667
+KKB,Kitoi Bay Airport,"Kitoi Bay, AK",58.19166667,-152.35
+KKH,Kongiganak Airport,"Kongiganak, AK",59.96166667,-162.88055556
+KKI,Akiachak Airport,"Akiachak, AK",60.91388889,-161.49333333
+KKK,Kalakaket Creek AS,"Kalakaket, AK",64.42444444,-156.84333333
+KKL,Karluk Lake Seaplane Base,"Karluk Lake, AK",57.36777778,-154.02527778
+KKU,Ekuk Airport,"Ekuk, AK",58.81111111,-158.55888889
+KLG,Kalskag Airport,"Kalskag, AK",61.53583333,-160.34555556
+KLL,Levelock Airport,"Levelock, AK",59.12694444,-156.86
+KLN,Larsen Bay Airport,"Larsen Bay, AK",57.535,-153.97666667
+KLP,Kelp Bay Airport,"Kelp Bay, AK",57.55,-134.86666667
+KLW,Klawock Airport,"Klawock, AK",55.57916667,-133.07611111
+KMO,Manokatak Seaplane Base,"Manokotak, AK",58.98166667,-159.05666667
+KMY,Moser Bay Airport,"Moser Bay, AK",57.02638889,-154.14361111
+KNK,Kokhanok Airport,"Kokhanok, AK",59.43333333,-154.8025
+KNW,New Stuyahok Airport,"New Stuyahok, AK",59.45166667,-157.37305556
+KOT,Kotlik Airport,"Kotlik, AK",63.03055556,-163.53277778
+KOY,Olga Bay Seaplane Base,"Olga Bay, AK",57.16222222,-154.2275
+KOZ,Ouzinkie Airport,"Ouzinkie, AK",57.94222222,-152.465
+KPB,Point Baker Airport,"Point Baker, AK",56.35,-133.61666667
+KPC,Port Clarence CGS,"Port Clarence, AK",65.25333333,-166.8575
+KPH,Pauloff Harbor Airport,"Pauloff Harbor, AK",54.45,-162.68333333
+KPK,Parks Seaplane Base,"Parks, AK",57.43361111,-153.9
+KPM,Napamute Airport,"Napamute, AK",61.53138889,-158.64083333
+KPN,Kipnuk Airport,"Kipnuk, AK",59.93166667,-164.02805556
+KPR,Port Williams Airport,"Port Williams, AK",58.43333333,-152.58333333
+KPV,Perryville Airport,"Perryville, AK",55.90666667,-159.16083333
+KPY,Port Bailey Airport,"Port Bailey, AK",57.93333333,-153.03333333
+KQA,Akutan Airport,"Akutan, AK",54.13333333,-165.78333333
+KSM,St. Mary's Airport,"St. Mary's, AK",62.06083333,-163.30194444
+KSR,Federal No.1,"Sandy River, AK",56.24444444,-160.38638889
+KTB,Thorne Bay Seaplane Base,"Thorne Bay, AK",55.68833333,-132.535
+KTH,Tikchik Lodge Airport,"Tikchik Lodge, AK",59.95555556,-158.48055556
+KTN,Ketchikan International,"Ketchikan, AK",55.35416667,-131.71111111
+KTS,Brevig Mission Airport,"Brevig Mission, AK",65.33194444,-166.46777778
+KUK,Kasigluk Airport,"Kasigluk, AK",60.87333333,-162.52444444
+KUW,Kugururok River Airport,"Kugururok River, AK",68.30694444,-161.4
+KVC,King Cove Airport,"King Cove, AK",55.11638889,-162.26666667
+KVL,Kivalina Airport,"Kivalina, AK",67.73611111,-164.56361111
+KWF,Waterfall Seaplane Base,"Waterfall, AK",55.29722222,-133.24055556
+KWK,Kwigillingok Airport,"Kwigillingok, AK",59.87555556,-163.16805556
+KWN,Quinhagak Airport,"Quinhagak, AK",59.755,-161.84527778
+KWP,West Point Village,"West Point, AK",57.76694444,-153.55
+KWT,Kwethluk Airport,"Kwethluk, AK",60.79027778,-161.44361111
+KXA,Kasaan Seaplane Base,"Kasaan, AK",55.53777778,-132.39583333
+KYC,Yankee Creek 2,"Yankee Creek, AK",63.00194444,-156.36722222
+KYK,Karluk Airport,"Karluk, AK",57.56611111,-154.45388889
+KYU,Koyukuk Airport,"Koyukuk, AK",64.87583333,-157.73055556
+KZB,Zachar Bay Airport,"Zachar Bay, AK",57.55,-153.75
+KZH,Kizhuyak Airport,"Kizhuyak, AK",57.58305556,-153.15
+LHB,Lost Harbor Airport,"Lost Harbor, AK",54.22611111,-165.61111111
+LIJ,Long Island Airport,"Long Island, AK",54.9,-132.75
+LIV,Livengood Airport,"Livengood, AK",65.53111111,-148.54111111
+LKK,Kulik Lake Airport,"Kulik Lake, AK",58.965,-155.09555556
+LMA,Lake Minchumina Airport,"Lake Minchumina, AK",63.88583333,-152.30194444
+LNI,Lonely AS,"Lonely, AK",70.91083333,-153.24222222
+LPW,Little Port Walter Airport,"Little Port Walter, AK",56.38333333,-134.83333333
+LSR,Lost River 1,"Lost River, AK",65.39611111,-167.16305556
+LUR,Cape Lisburne LRRS,"Cape Lisburne, AK",68.875,-166.11111111
+LVD,Lime Village Airport,"Lime Village, AK",61.35916667,-155.44027778
+MCG,McGrath Airport,"McGrath, AK",62.95111111,-155.605
+MCL,Denali,"McKinley Park, AK",63.645,-148.79194444
+MDO,Middleton Island Airport,"Middleton Island, AK",59.45,-146.30722222
+MDR,Medfra Airport,"Medfra, AK",63.10694444,-154.71666667
+MHM,Minchumina Airport,"Minchumina, AK",63.88583333,-152.30194444
+MLL,Marshall Don Hunter Sr.,"Marshall, AK",61.86416667,-162.02611111
+MLY,Manley Hot Springs Airport,"Manley Hot Springs, AK",64.98805556,-150.6475
+MNT,Minto Al Wright,"Minto, AK",65.14805556,-149.36861111
+MOS,Moses Point Airport,"Moses Point, AK",64.69805556,-162.05722222
+MOU,Mountain Village Airport,"Mountain Village, AK",62.09472222,-163.68277778
+MRI,Merrill Field,"Anchorage, AK",61.21361111,-149.84472222
+MTM,Metlakatala,"Metlakatla, AK",55.13333333,-131.58333333
+MTX,Metro Field,"Fairbanks, AK",64.80666667,-147.7625
+MXY,McCarthy Airport,"McCarthy, AK",61.43777778,-142.9025
+MYK,May Creek Airport,"May Creek, AK",61.33611111,-142.68583333
+MYU,Mekoryuk Airport,"Mekoryuk, AK",60.3725,-166.27027778
+N8K,McGahan Industrial Park,"Nikisha, AK",60.72527778,-151.30222222
+NCN,Chenega Bay,"Chenega, AK",60.07861111,-147.99472222
+NIB,Nikolai Airport,"Nikolai, AK",63.01861111,-154.35833333
+NIE,Niblack Airport,"Niblack, AK",55.06666667,-132.14583333
+NIN,Ninilchik Airport,"Ninilchik, AK",60.02027778,-151.58944444
+NKI,Naukiti Airport,"Naukiti, AK",55.875,-133.22083333
+NKV,Nichin Cove Seaplane Base,"Nichen Cove, AK",55.85,-133.21666667
+NLG,Nelson Lagoon Airport,"Nelson Lagoon, AK",56.0075,-161.16027778
+NME,Nightmute Airport,"Nightmute, AK",60.46916667,-164.70416667
+NNK,Naknek Airport,"Naknek, AK",58.73472222,-157.02527778
+NNL,Nondalton Airport,"Nondalton, AK",59.98027778,-154.83916667
+NUI,Nuiqsut Airport,"Nuiqsut, AK",70.20972222,-151.00638889
+NUL,Nulato Airport,"Nulato, AK",64.72944444,-158.07416667
+NUP,Nunapitchuk Airport,"Nunapitchuk, AK",60.90611111,-162.44055556
+OBU,Kobuk Airport,"Kobuk, AK",66.91222222,-156.89722222
+OCI,Thumb Bay,"Oceanic, AK",60.2,-147.81666667
+OHC,Northeast Cape AFS,"Northeast Cape, AK",63.32638889,-168.96888889
+OLH,Old Harbor Airport,"Old Harbor, AK",57.21833333,-153.26972222
+OME,Nome Airport,"Nome, AK",64.51055556,-165.44472222
+ONN,Onion Bay Airport,"Onion Bay, AK",58.06805556,-153.25388889
+OOB,Cobol Alaska/Scaled/,"Cobol, AK",57.48333333,-135.86666667
+OOK,Toksook Bay,"Toksook, AK",60.54138889,-165.08722222
+OPH,Ophir Airport,"Ophir, AK",63.14583333,-156.52888889
+OQA,McDonald Lake Airport,"McDonald Lake, AK",55.93722222,-131.81277778
+OQB,Bible Camp Airport,"Bible Camp, AK",57.92638889,-156.08333333
+OQC,Cinder River Lodge Airport,"Cinder River Lodge, AK",57.06666667,-157.81416667
+OQF,Lemesurier Island Airport,"Lemesurier Island, AK",58.28444444,-136.08472222
+OQG,Tracy Arm Airport,"Tracy Arm, AK",57.91138889,-133.40222222
+OQI,Vrems Airport,"Vrems, AK",57.85694444,-157.08666667
+OQK,Akolik Airport,"Akolik, AK",68.98333333,-163.44555556
+OQL,Mels Airport,"Mels, AK",56.23333333,-160.075
+OQM,Meshik Airport,"Meshik, AK",56.76666667,-158.08527778
+OQN,Telaquana Lake Airport,"Telaquana Lake, AK",60.95527778,-153.9075
+OQO,Chelatna Lake Lodge Airport,"Chelatna Lake Lodge, AK",62.43416667,-151.41472222
+OQP,Pumice Airport,"Pumice, AK",57.17833333,-157.73333333
+OQQ,Points Alsworth,"Port Alsworth, AK",60.18333333,-154.33388889
+OQR,Twin Lakes Airport,"Twin Lakes, AK",60.65277778,-154.03611111
+OQS,Sandy Airport,"Sandy, AK",56.23333333,-160.22583333
+OQV,Shirleyville Airport,"Shirleyville, AK",61.01361111,-151.40694444
+OQW,Doug Carney Strip Airport,"Doug Carney Strip, AK",61.43416667,-157.05
+OQX,Shisholik Airport,"Shisholik, AK",67.0,-162.83333333
+OQY,Camp Sivinuvik,"Sivinuvik, AK",66.88333333,-161.48333333
+OQZ,American Creek Airport,"American Creek, AK",62.04333333,-158.25638889
+ORI,Port Lions Airport,"Port Lions, AK",57.885,-152.8475
+ORT,Northway Airport,"Northway, AK",62.96111111,-141.92805556
+ORV,Robert/Bob/Curtis Memorial,"Noorvik, AK",66.8175,-161.02222222
+OTZ,Ralph Wien Memorial,"Kotzebue, AK",66.88916667,-162.60666667
+PAQ,Warren Bud Woods Palmer Municipal,"Palmer, AK",61.595,-149.08861111
+PBK,Pack Creek Airport,"Pack Creek, AK",57.8,-134.7
+PCA,Portage Creek Airport,"Portage Creek, AK",58.90638889,-157.71111111
+PCE,Painter Creek Airport,"Painter Creek, AK",57.15388889,-157.39694444
+PDB,Pedro Bay Airport,"Pedro Bay, AK",59.79694444,-154.13
+PEC,Pelican Seaplane Base,"Pelican, AK",57.95,-136.23333333
+PFA,Paf Warren Airport,"Paf Warren, AK",58.72694444,-156.94333333
+PFD,Port Frederick Airport,"Port Frederick, AK",57.95,-135.65
+PGM,Port Graham Airport,"Port Graham, AK",59.34861111,-151.83027778
+PHO,Point Hope Airport,"Point Hope, AK",68.34805556,-166.79916667
+PII,Phillips Field,"Fairbanks, AK",64.85,-147.78666667
+PIP,Pilot Point Airport,"Pilot Point, AK",57.58027778,-157.57194444
+PIZ,Point Lay LRRS,"Point Lay, AK",69.73277778,-163.00527778
+PJS,Port San Juan Airport,"Port San Juan, AK",60.05,-148.06666667
+PKA,Napaskiak Airport,"Napaskiak, AK",60.70277778,-161.77833333
+PML,Port Moller Airport,"Port Moller, AK",56.00611111,-160.56083333
+PMU,Paimiut Airport,"Paimiut, AK",61.96666667,-160.23333333
+PNF,Peterson's Point Airport,"Peterson's Point, AK",58.68333333,-156.83333333
+POQ,Polk Inlet Airport,"Polk Inlet, AK",55.2,-132.23333333
+PPC,Prospect Creek Airport,"Prospect Creek, AK",66.81416667,-150.64361111
+PPV,Port Protection Airport,"Port Protection, AK",56.32916667,-133.60833333
+PQS,Pilot Station Airport,"Pilot Station, AK",61.96138889,-162.94222222
+PRT,Coast Guard Heliport,"Point Retreat, AK",58.41083333,-134.95638889
+PSG,Petersburg James A Johnson,"Petersburg, AK",56.80138889,-132.94611111
+PTA,Port Alsworth Airport,"Port Alsworth, AK",60.20444444,-154.31888889
+PTC,Port Alice Airport,"Port Alice, AK",55.78333333,-133.6
+PTD,Port Alexander Airport,"Port Alexander, AK",56.24722222,-134.64638889
+PTH,Port Heiden Airport,"Port Heiden, AK",56.95916667,-158.63333333
+PTL,Port Armstrong Airport,"Port Armstrong, AK",56.29611111,-134.66138889
+PTR,Pleasant Harbour Airport,"Pleasant Harbour, AK",57.83333333,-153.25
+PTU,Platinum Airport,"Platinum, AK",59.01777778,-161.82722222
+PUO,Prudhoe Bay Airport,"Prudhoe Bay, AK",70.25194444,-148.34277778
+PVY,Pope Vanoy Airport,"Pope Vanoy, AK",59.31666667,-154.91666667
+PWR,Big and Little Port Walter,"Big Port Walter, AK",56.38333333,-134.65
+PYA,Port Ashton Airport,"Port Ashton, AK",60.0575,-148.05111111
+PYL,Perry Island Seaplane Base,"Perry Island, AK",60.68583333,-147.91666667
+QQB,Keyes Point Airport,"Keyes Point, AK",60.15,-154.61666667
+QQC,Nimiuk Point Airport,"Nimiuk Point, AK",66.78333333,-162.01666667
+QQE,Sealing Point Airport,"Sealing Point, AK",67.11666667,-163.75
+RBB,Randy Field,"Ugashik, AK",57.51638889,-157.38777778
+RBH,Brooks Lodge Airport,"Brooks Lodge, AK",58.55,-155.8
+RBY,Ruby Airport,"Ruby, AK",64.72722222,-155.47
+RDB,Red Dog Airport,"Red Dog, AK",68.03222222,-162.89916667
+RDV,Red Devil Airport,"Red Devil, AK",61.78805556,-157.35027778
+RLU,Bornite Upper,"Bornite/Ruby Creek, AK",67.10166667,-156.92916667
+RMP,Rampart Airport,"Rampart, AK",65.50777778,-150.14083333
+RQI,Nixon Fork Mine Airport,"Nixon Fork Mine, AK",62.23388889,-154.73472222
+RSH,Russian Mission Airport,"Russian Mission, AK",61.775,-161.31944444
+RSP,Raspberry Straits,"Raspberry Strait, AK",58.03333333,-153.0
+RTE,Marguerite Bay Airport,"Marguerite Bay, AK",55.7,-131.63333333
+RWB,Rowan Bay Airport,"Rowan Bay, AK",56.65,-134.28333333
+RXB,Rodman Bay Airport,"Rodman Bay, AK",57.46666667,-135.4
+SAG,Sagwon Airport,"Sagwon, AK",69.36638889,-148.70444444
+SCC,Deadhorse Airport,"Deadhorse, AK",70.19472222,-148.46527778
+SCJ,Smith Cove Airport,"Smith Cove, AK",55.45472222,-132.35194444
+SCM,Scammon Bay Airport,"Scammon Bay, AK",61.84444444,-165.57361111
+SDP,Sand Point,"Sandpoint, AK",55.31361111,-160.52138889
+SGW,Saginaw,"Saginaw Bay, AK",56.88333333,-134.15
+SGY,Skagway Airport,"Skagway, AK",59.46027778,-135.31694444
+SHG,Shungnak Airport,"Shungnak, AK",66.88805556,-157.1625
+SHH,Shishmaref Airport,"Shishmaref, AK",66.24944444,-166.08944444
+SHX,Shageluk Airport,"Shageluk, AK",62.69222222,-159.56916667
+SIT,Sitka Rocky Gutierrez,"Sitka, AK",57.04694444,-135.36111111
+SKJ,Sitkinak CGS,"Sitkinak, AK",56.53277778,-154.11388889
+SKK,Shaktoolik Airport,"Shaktoolik, AK",64.37111111,-161.22388889
+SKW,Skwentna Airport,"Skwentna, AK",61.96611111,-151.19527778
+SLQ,Sleetmute Airport,"Sleetmute, AK",61.70055556,-157.16583333
+SMK,St. Michael Airport,"St. Michael, AK",63.49,-162.11027778
+SMU,Sheep Mountain Airport,"Sheep Mountain, AK",61.81138889,-147.50916667
+SNP,St. Paul Island,"St. Paul, AK",57.16638889,-170.2225
+SOL,Solomon State Field,"Solomon, AK",64.56055556,-164.44222222
+SOV,Seldovia Airport,"Seldovia, AK",59.44388889,-151.705
+SRV,Stony River Airport,"Stony River, AK",61.78972222,-156.58861111
+STG,St. George Island Airport,"St. George Island, AK",56.60083333,-169.56416667
+SVA,Savoonga Airport,"Savoonga, AK",63.68638889,-170.49305556
+SVS,Stevens Village Airport,"Stevens Village, AK",66.01694444,-149.05444444
+SVW,Sparrevohn LRRS,"Sparrevohn, AK",61.09722222,-155.57472222
+SWD,Seward Airport,"Seward, AK",60.13,-149.41666667
+SXP,Nunam Iqua,"Sheldon Point, AK",62.52055556,-164.84777778
+SXQ,Soldotna Airport,"Soldotna, AK",60.47527778,-151.03972222
+SYA,Eareckson AS,"Shemya, AK",52.71222222,174.11361111
+SYB,Seal Bay Airport,"Seal Bay, AK",58.38333333,-152.23333333
+T44,Kodiak Airport,"Kodiak, AK",57.78083333,-152.39138889
+TAL,Ralph M Calhoun Memorial,"Tanana, AK",65.17444444,-152.10805556
+TCT,Takotna Airport,"Takotna, AK",62.99305556,-156.02972222
+TEH,Tetlin Airport,"Tetlin, AK",63.12472222,-142.51861111
+TEK,Tatitlek Airport,"Tatitlek, AK",60.8725,-146.69111111
+TKA,Talkeetna Airport,"Talkeetna, AK",62.32138889,-150.09277778
+TKE,Tenakee Airport,"Tenakee, AK",57.71666667,-135.2
+TKI,Tokeen Airport,"Tokeen, AK",55.9375,-133.325
+TKJ,Tok Junction,"Tok, AK",63.32944444,-142.95361111
+TKL,Taku Seaplane Base,"Taku Lodge, AK",58.49,-133.94166667
+TLA,Teller Airport,"Teller, AK",65.24027778,-166.33944444
+TLF,Telida Airport,"Telida, AK",63.37888889,-153.28416667
+TLJ,Tatalina LRRS,"Tatalina, AK",62.895,-155.97805556
+TLT,Tuluksak Airport,"Tuluksak, AK",61.08777778,-160.92333333
+TNC,Tin City LRRS,"Tin City, AK",65.56416667,-167.9225
+TNK,Tununak Airport,"Tununak, AK",60.56944444,-165.24638889
+TOG,Togiak Airport,"Togiak, AK",59.05361111,-160.39666667
+TSG,Tanacross Airport,"Tanacross, AK",63.37416667,-143.32888889
+TWA,Twin Hills Airport,"Twin Hills, AK",59.07444444,-160.275
+TWE,Taylor Airport,"Taylor, AK",65.67916667,-164.79888889
+TYE,Tyonek Airport,"Tyonek, AK",61.07666667,-151.13805556
+UGB,Ugashik Bay,"Pilot Point, AK",57.42527778,-157.74
+UGI,Uganik Airport,"Uganik, AK",57.75,-153.31666667
+UGS,Ugashik Airport,"Ugashik, AK",57.52333333,-157.39611111
+UMB,North Shore,"Umnak, AK",53.37666667,-167.8875
+UMM,Summit Airport,"Summit, AK",63.33111111,-149.12888889
+UMT,Umiat Airport,"Umiat, AK",69.37111111,-152.135
+UNK,Unalakleet Airport,"Unalakleet, AK",63.88333333,-160.79666667
+UNS,Umnak Airport,"Umnak, AK",53.22388889,-168.43222222
+USI,Usi Belli Coal Mine,"Usibelli, AK",63.86666667,-148.78333333
+UTO,Indian Mountain LRRS,"Utopia, AK",65.99277778,-153.70361111
+UUK,North Kuparuk,"Kuparuk, AK",70.36222222,-149.02833333
+UXA,Lik Camp Airport,"Lik Camp, AK",68.16666667,-163.2
+UXI,Calder Bay Airport,"Calder Bay, AK",56.17166667,-133.49305556
+UXL,Chariot Airport,"Chariot, AK",68.09722222,-165.76388889
+UXM,47-Mile Mine Airport,"47-Mile Mine, AK",61.04444444,-158.14527778
+VAK,Chevak Airport,"Chevak, AK",61.54083333,-165.60083333
+VCB,View Cove Airport,"View Cove, AK",55.06666667,-133.01666667
+VDZ,Valdez Pioneer Field,"Valdez, AK",61.13416667,-146.24472222
+VEE,Venetie Airport,"Venetie, AK",67.00861111,-146.36638889
+VIK,Kavik River Airport,"Kavik River, AK",69.67722222,-146.89916667
+VWZ,Granite Creek Mine Airport,"Granite Creek Mine, AK",62.36305556,-156.97416667
+VZA,Marvel Creek Mine Airport,"Marvel Creek Mine, AK",60.90611111,-159.63916667
+VZB,Mitrofania Airport,"Mitrofania, AK",56.00166667,-158.83333333
+VZC,Mush Bay Airport,"Mush Bay, AK",57.7,-153.47333333
+VZD,Campbell Lagoon Airport,"Campbell Lagoon, AK",57.85555556,-153.63333333
+VZE,Frazer Lake Airport,"Frazer Lake, AK",57.20833333,-154.08611111
+VZF,Afognak Straits Airport,"Afognak Straits, AK",58.0,-152.81666667
+VZG,Moffet Bay Airport,"Moffet Bay, AK",55.42833333,-162.63
+VZM,Jensens Strip Airport,"Jensens Strip, AK",57.95,-157.05
+VZN,Wildman Creek Airport,"Wildman Creek, AK",56.25,-159.91666667
+VZO,Stepovak Airport,"Stepovak, AK",55.83333333,-159.86666667
+VZQ,Puale Bay Airport,"Puale Bay, AK",57.73333333,-155.63333333
+VZR,Katmai Bay Airport,"Katmai Bay, AK",58.0,-154.96666667
+VZS,Kashvik Bay Airport,"Kashvik Bay, AK",57.96666667,-155.13333333
+VZT,Cinder Mountain Airport,"Cinder Mountain, AK",57.05833333,-157.8
+VZU,Hagemeister Island Airport,"Hagemeister Island, AK",58.75,-160.83333333
+VZV,Cape Peirce Airport,"Cape Peirce, AK",58.55277778,-161.76861111
+VZW,Cape Greig Airport,"Cape Greig, AK",57.71666667,-157.71666667
+VZY,Katmai Lodge Airport,"Katmai Lodge, AK",59.07,-156.04833333
+WAA,Wales Airport,"Wales, AK",65.6225,-168.095
+WBB,Stebbins Airport,"Stebbins, AK",63.51583333,-162.27805556
+WBQ,Beaver Airport,"Beaver, AK",66.36222222,-147.40638889
+WCL,Whalers Cove Lodge Airport,"Whalers Cove Lodge, AK",57.46666667,-134.56666667
+WCR,Chandalar Lake,"Chandalar, AK",67.50444444,-148.48333333
+WDB,Wide Bay Airport,"Wide Bay, AK",57.37138889,-156.4125
+WFB,Ketchikan Waterfront Seaplane Base,"Ketchikan, AK",55.35805556,-131.66833333
+WHD,Hyder Seaplane Base,"Hyder, AK",55.90361111,-130.005
+WKK,Aleknagik New,"Aleknagik, AK",59.2825,-158.61777778
+WLB,Labouchere Bay Airport,"Labouchere Bay, AK",56.28333333,-133.65
+WLK,Selawik Airport,"Selawik, AK",66.60027778,-159.98583333
+WLR,Loring Airport,"Loring, AK",55.60166667,-131.635
+WMK,Meyers Chuck Seaplane Base,"Meyers Chuck, AK",55.74,-132.25333333
+WMO,White Mountain Airport,"White Mountain, AK",64.68916667,-163.41277778
+WNA,Napakiak Airport,"Napakiak, AK",60.69027778,-161.97861111
+WNC,Naukati Bay Seaplane Base,"Tuxekan Island, AK",55.84972222,-133.22777778
+WOD,Wood River Airport,"Wood River, AK",59.06666667,-134.75
+WOW,Willow Airport,"Willow, AK",61.75416667,-150.05166667
+WQJ,Peard Bay Airport,"Peard Bay, AK",70.8,-158.33333333
+WQL,Bluff Airport,"Bluff, AK",64.59055556,-163.77527778
+WQR,Tibbetts,"Naknek, AK",58.73416667,-157.00722222
+WQW,David River Airport,"David River, AK",55.91444444,-161.6375
+WQX,Kiavak Airport,"Kiavak, AK",57.01666667,-153.66666667
+WQY,Port Wakefield Airport,"Port Wakefield, AK",58.05277778,-153.05
+WQZ,Chignik Lake Airport,"Chignik Lake, AK",56.25555556,-158.77777778
+WRG,Wrangell Airport,"Wrangell, AK",56.48444444,-132.36972222
+WSB,Steamboat Bay Airport,"Steamboat Bay, AK",55.51666667,-133.63333333
+WSJ,San Juan Airport,"San Juan, AK",57.73111111,-153.31833333
+WSM,Wiseman Airport,"Wiseman, AK",67.405,-150.12083333
+WSN,South Naknek 2,"South Naknek, AK",58.70194444,-157.0025
+WTK,Noatak Airport,"Noatak, AK",67.56111111,-162.98055556
+WTL,Tuntutuliak Airport,"Tuntutuliak, AK",60.35111111,-162.65472222
+WTT,Whittier Airport,"Whittier, AK",60.77722222,-148.72166667
+WWA,Wasilla Airport,"Wasilla, AK",61.57194444,-149.53944444
+WWP,Whale Pass Airport,"Whale Pass, AK",56.11666667,-133.11666667
+WWT,Mertarvik,"Newtok, AK",60.81027778,-164.49944444
+WYB,Yes Bay Lodge Seaplane Base,"Yes Bay, AK",55.91611111,-131.80111111
+XWC,Yantarni Bay Airport,"Yantarni Bay, AK",56.88333333,-156.56666667
+XWT,Nushagak Bay Airport,"Nushagak Bay, AK",57.45,-158.0
+YAK,Yakutat Airport,"Yakutat, AK",59.50888889,-139.65972222
+ZNC,Nyac Airport,"Nyac, AK",60.98111111,-159.99388889
+ZXF,Illinois Creek Airport,"Illinois Creek, AK",64.11666667,-157.35
+ZXH,Chomondely Sound Airport,"Chomondely Sound, AK",55.23916667,-132.11416667
+ZXI,Coal Bay Airport,"Coal Bay, AK",55.50055556,-132.4875
+ZXJ,Happy Harbour Airport,"Happy Harbour, AK",55.48833333,-132.33333333
+ZXK,Lancaster Cove Airport,"Lancaster Cove, AK",55.21666667,-132.08638889
+ZXL,Reid Cove Airport,"Reid Cove, AK",55.2,-132.23833333
+ZXM,Saltery Cove Airport,"Saltery Cove, AK",55.40861111,-132.32916667
+ZXN,Clover Bay Airport,"Clover Bay, AK",55.29888889,-132.145
+ZXO,El Capitan Peak,"El Capitan, AK",56.18416667,-133.31055556
+ZXP,Salmon Bay Lake Airport,"Salmon Bay Lake, AK",56.23722222,-133.18888889
+ZZZ,Unknown Point in Alaska,Unknown Point in Alaska,,
