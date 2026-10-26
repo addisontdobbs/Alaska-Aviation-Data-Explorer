@@ -1,0 +1,628 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #10213d;
+}
+
+/* =========================
+   MAIN LAYOUT
+   ========================= */
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 210px;
+    min-width: 210px;
+    background: #102f4c;
+    color: white;
+    padding: 22px 14px;
+    min-height: 100vh;
+}
+
+.sidebar h2 {
+    margin: 0 10px 25px;
+    font-size: 21px;
+    line-height: 1.2;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.sidebar nav a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 13px 14px;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+.sidebar nav a:hover {
+    background: #1d5e9e;
+}
+
+.sidebar nav a:first-child {
+    background: #277bd3;
+}
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+    padding: 0 24px 28px;
+}
+
+.topbar {
+    display: none;
+}
+
+/* =========================
+   DASHBOARD
+   ========================= */
+
+.dashboard-page {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+/* Hero */
+
+.dashboard-hero {
+    display: grid;
+    grid-template-columns: 1fr 355px;
+    gap: 20px;
+    align-items: center;
+    padding: 20px 0 15px;
+}
+
+.dashboard-hero-text h1 {
+    margin: 0 0 8px;
+    font-size: 30px;
+    color: #10213d;
+}
+
+.dashboard-hero-text p {
+    margin: 0;
+    color: #60708d;
+    font-size: 15px;
+    line-height: 1.5;
+    max-width: 750px;
+}
+
+.dashboard-hero-image {
+    height: 160px;
+}
+
+.image-placeholder {
+    height: 100%;
+    border-radius: 10px;
+    background:
+        linear-gradient(
+            rgba(17, 47, 76, 0.15),
+            rgba(17, 47, 76, 0.45)
+        ),
+        linear-gradient(135deg, #aec9e3, #335f8c);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* =========================
+   STAT CARDS
+   ========================= */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.stat-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    border-radius: 10px;
+    padding: 18px;
+
+    border: 1px solid #dde5ee;
+    background: white;
+    min-height: 105px;
+}
+
+.stat-card h2 {
+    margin: 0 0 5px;
+    font-size: 25px;
+}
+
+.stat-card p {
+    margin: 0;
+    font-size: 14px;
+    color: #465875;
+}
+
+.stat-icon {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.total-card {
+    background: #f1f7ff;
+}
+
+.total-card .stat-icon {
+    background: #d8eaff;
+    color: #1874da;
+}
+
+.completed-card {
+    background: #f0faf2;
+}
+
+.completed-card .stat-icon {
+    background: #d9f3df;
+    color: #20a453;
+}
+
+.cancelled-card {
+    background: #fff2f2;
+}
+
+.cancelled-card .stat-icon {
+    background: #ffdcdc;
+    color: #dd3c3c;
+}
+
+.delay-card {
+    background: #fff9e9;
+}
+
+.delay-card .stat-icon {
+    background: #ffedb9;
+    color: #d89b17;
+}
+
+/* =========================
+   PANELS
+   ========================= */
+
+.panel {
+    background: white;
+    border: 1px solid #dce4ee;
+    border-radius: 10px;
+    padding: 16px;
+}
+
+.panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.panel-header h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #10213d;
+}
+
+.panel-link {
+    color: #1474dc;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.analytics-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1.1fr 0.9fr;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+/* =========================
+   MONTHLY FLIGHTS
+   ========================= */
+
+.monthly-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.month-row {
+    display: grid;
+    grid-template-columns: 35px 1fr 55px;
+    align-items: center;
+    gap: 10px;
+}
+
+.month-name {
+    color: #54657e;
+    font-size: 12px;
+}
+
+.month-bar-container {
+    height: 18px;
+    background: #edf2f8;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.month-bar {
+    height: 100%;
+    min-width: 3px;
+    background: #2785e6;
+    border-radius: 4px;
+}
+
+.month-total {
+    font-size: 12px;
+    text-align: right;
+    color: #33445f;
+}
+
+/* =========================
+   AIRLINES
+   ========================= */
+
+.airline-list {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    margin-top: 10px;
+}
+
+.airline-row {
+    display: grid;
+    grid-template-columns: 130px 1fr 55px;
+    gap: 9px;
+    align-items: center;
+}
+
+.airline-name {
+    font-size: 12px;
+    text-align: right;
+}
+
+.airline-bar-container {
+    height: 22px;
+    background: #edf2f7;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.airline-bar {
+    height: 100%;
+    min-width: 5px;
+    background: #2f79bd;
+}
+
+.airline-total {
+    font-size: 12px;
+}
+
+/* =========================
+   TABLES
+   ========================= */
+
+.dashboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.dashboard-table th {
+    text-align: left;
+    background: #edf2f7;
+    color: #263a57;
+    padding: 9px 10px;
+    font-weight: 600;
+}
+
+.dashboard-table td {
+    padding: 9px 10px;
+    border-bottom: 1px solid #e5ebf2;
+    color: #24354e;
+}
+
+.dashboard-table tr:last-child td {
+    border-bottom: none;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+/* =========================
+   BOTTOM GRID
+   ========================= */
+
+.bottom-dashboard-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.6fr 0.65fr;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.map-panel {
+    min-height: 340px;
+}
+
+.map-placeholder {
+    height: 275px;
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            rgba(220, 240, 250, 0.65),
+            rgba(165, 211, 232, 0.8)
+        );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-placeholder-content {
+    text-align: center;
+    color: #35546f;
+}
+
+.map-placeholder-content h3 {
+    margin: 0 0 6px;
+}
+
+.map-placeholder-content p {
+    margin: 0;
+    font-size: 13px;
+}
+
+/* =========================
+   RECENT FLIGHTS
+   ========================= */
+
+.recent-panel {
+    min-width: 0;
+}
+
+.empty-state {
+    min-height: 220px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: #64748b;
+}
+
+.empty-state p {
+    margin-bottom: 15px;
+}
+
+.primary-button {
+    text-decoration: none;
+    background: #1678df;
+    color: white;
+    padding: 10px 17px;
+    border-radius: 6px;
+}
+
+/* Status labels */
+
+.status {
+    padding: 5px 9px;
+    border-radius: 14px;
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.status.on-time {
+    background: #dcf6e4;
+    color: #208a45;
+}
+
+.status.delayed {
+    background: #fff0c9;
+    color: #a77600;
+}
+
+.status.cancelled {
+    background: #ffdede;
+    color: #c43b3b;
+}
+
+/* =========================
+   QUICK ACTIONS
+   ========================= */
+
+.quick-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.quick-action {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 11px;
+
+    text-decoration: none;
+    color: #17304f;
+
+    background: #f1f6fb;
+    border-radius: 7px;
+
+    font-size: 13px;
+}
+
+.quick-action:hover {
+    background: #e3eef9;
+}
+
+.quick-action span {
+    width: 22px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* =========================
+   ROUTE BANNER
+   ========================= */
+
+.route-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    background: #eaf4ff;
+    border: 1px solid #d6e8fa;
+
+    border-radius: 9px;
+
+    padding: 16px 20px;
+}
+
+.route-banner h3 {
+    margin: 0 0 5px;
+    font-size: 15px;
+}
+
+.route-banner p {
+    margin: 0;
+    font-size: 13px;
+    color: #53657c;
+}
+
+.route-button {
+    background: #1678df;
+    color: white;
+    text-decoration: none;
+
+    padding: 11px 22px;
+    border-radius: 6px;
+
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 1200px) {
+
+    .dashboard-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-hero-image {
+        display: none;
+    }
+
+    .analytics-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .routes-panel {
+        grid-column: span 2;
+    }
+
+    .bottom-dashboard-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .quick-actions-panel {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .analytics-grid,
+    .bottom-dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .routes-panel,
+    .quick-actions-panel {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: 0;
+        min-height: auto;
+    }
+
+    .sidebar nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .main-content {
+        padding: 0 14px 20px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-hero-text h1 {
+        font-size: 24px;
+    }
+
+    .route-banner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

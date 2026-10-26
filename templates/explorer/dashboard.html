@@ -1,0 +1,485 @@
+{% extends "base.html" %}
+
+{% block title %}
+Dashboard | Alaska Aviation Data Explorer
+{% endblock %}
+
+{% block page_title %}
+{% endblock %}
+
+{% block content %}
+
+<div class="dashboard-page">
+
+    <!-- Welcome / Hero Section -->
+    <section class="dashboard-hero">
+
+        <div class="dashboard-hero-text">
+            <h1>Welcome to the Alaska Aviation Data Explorer</h1>
+
+            <p>
+                Explore {{ total_flights }} Alaska-related flights from 2025.
+                Search flights, compare routes, analyze delays, and save your
+                own notes for future reference.
+            </p>
+        </div>
+
+        <div class="dashboard-hero-image">
+            <div class="image-placeholder">
+                Alaska Aviation
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- KPI Cards -->
+    <section class="stats-grid">
+
+        <div class="stat-card total-card">
+            <div class="stat-icon">
+                ✈
+            </div>
+
+            <div>
+                <h2>{{ total_flights }}</h2>
+                <p>Total Flights</p>
+            </div>
+        </div>
+
+
+        <div class="stat-card completed-card">
+            <div class="stat-icon">
+                ✓
+            </div>
+
+            <div>
+                <h2>{{ completed_flights }}</h2>
+                <p>Completed Flights</p>
+            </div>
+        </div>
+
+
+        <div class="stat-card cancelled-card">
+            <div class="stat-icon">
+                ×
+            </div>
+
+            <div>
+                <h2>{{ cancelled_flights }}</h2>
+                <p>Cancelled Flights</p>
+            </div>
+        </div>
+
+
+        <div class="stat-card delay-card">
+            <div class="stat-icon">
+                ◷
+            </div>
+
+            <div>
+                <h2>{{ avg_arrival_delay|floatformat:2 }} min</h2>
+                <p>Average Arrival Delay</p>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Main Analytics Row -->
+    <section class="analytics-grid">
+
+        <!-- Flights By Month -->
+        <div class="panel monthly-panel">
+
+            <div class="panel-header">
+                <h2>Flights by Month (2025)</h2>
+            </div>
+
+            <div class="monthly-chart">
+
+                {% for month in monthly_flights %}
+
+                    <div class="month-row">
+
+                        <div class="month-name">
+                            {% if month.month == 1 %}
+                                Jan
+                            {% elif month.month == 2 %}
+                                Feb
+                            {% elif month.month == 3 %}
+                                Mar
+                            {% elif month.month == 4 %}
+                                Apr
+                            {% elif month.month == 5 %}
+                                May
+                            {% elif month.month == 6 %}
+                                Jun
+                            {% elif month.month == 7 %}
+                                Jul
+                            {% elif month.month == 8 %}
+                                Aug
+                            {% elif month.month == 9 %}
+                                Sep
+                            {% elif month.month == 10 %}
+                                Oct
+                            {% elif month.month == 11 %}
+                                Nov
+                            {% elif month.month == 12 %}
+                                Dec
+                            {% endif %}
+                        </div>
+
+                        <div class="month-bar-container">
+                            <div
+                                class="month-bar"
+                                style="width: {% widthratio month.total 8000 100 %}%;">
+                            </div>
+                        </div>
+
+                        <div class="month-total">
+                            {{ month.total }}
+                        </div>
+
+                    </div>
+
+                {% empty %}
+
+                    <p>No monthly flight data available.</p>
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+
+        <!-- Top Airlines -->
+        <div class="panel airline-panel">
+
+            <div class="panel-header">
+                <h2>Top 5 Airlines</h2>
+            </div>
+
+            <div class="airline-list">
+
+                {% for airline in top_airlines %}
+
+                    <div class="airline-row">
+
+                        <div class="airline-name">
+
+                            {% if airline.marketing_carrier == "AS" %}
+                                Alaska Airlines (AS)
+
+                            {% elif airline.marketing_carrier == "DL" %}
+                                Delta (DL)
+
+                            {% elif airline.marketing_carrier == "UA" %}
+                                United (UA)
+
+                            {% elif airline.marketing_carrier == "AA" %}
+                                American (AA)
+
+                            {% elif airline.marketing_carrier == "HA" %}
+                                Hawaiian (HA)
+
+                            {% else %}
+                                {{ airline.marketing_carrier }}
+                            {% endif %}
+
+                        </div>
+
+                        <div class="airline-bar-container">
+
+                            <div
+                                class="airline-bar"
+                                style="width: {% widthratio airline.total total_flights 100 %}%;">
+                            </div>
+
+                        </div>
+
+                        <div class="airline-total">
+                            {{ airline.total }}
+                        </div>
+
+                    </div>
+
+                {% empty %}
+
+                    <p>No airline data available.</p>
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+
+        <!-- Top Routes -->
+        <div class="panel routes-panel">
+
+            <div class="panel-header">
+                <h2>Top 5 Routes</h2>
+            </div>
+
+            <table class="dashboard-table">
+
+                <thead>
+                    <tr>
+                        <th>Route</th>
+                        <th>Total Flights</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    {% for route in top_routes %}
+
+                        <tr>
+                            <td>
+                                {{ route.origin }}
+                                →
+                                {{ route.destination }}
+                            </td>
+
+                            <td>
+                                {{ route.total }}
+                            </td>
+                        </tr>
+
+                    {% empty %}
+
+                        <tr>
+                            <td colspan="2">
+                                No route data available.
+                            </td>
+                        </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- Bottom Dashboard Row -->
+    <section class="bottom-dashboard-grid">
+
+        <!-- Airport Map -->
+        <div class="panel map-panel">
+
+            <div class="panel-header">
+                <h2>Alaska Airport Map</h2>
+            </div>
+
+            <div class="map-placeholder">
+
+                <div class="map-placeholder-content">
+                    <h3>Alaska Airports</h3>
+
+                    <p>
+                        Interactive airport map will be added here.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Recently Viewed Flights -->
+        <div class="panel recent-panel">
+
+            <div class="panel-header">
+
+                <h2>Recently Viewed Flights</h2>
+
+                <a href="#" class="panel-link">
+                    View All Flights →
+                </a>
+
+            </div>
+
+
+            {% if recently_viewed_flights %}
+
+                <div class="table-wrapper">
+
+                    <table class="dashboard-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>Date</th>
+                                <th>Flight</th>
+                                <th>Airline</th>
+                                <th>Route</th>
+                                <th>Departure</th>
+                                <th>Arrival</th>
+                                <th>Status</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            {% for flight in recently_viewed_flights %}
+
+                                <tr>
+
+                                    <td>
+                                        {{ flight.flight_date }}
+                                    </td>
+
+                                    <td>
+                                        {{ flight.marketing_carrier }}
+                                        {{ flight.marketing_flight_number }}
+                                    </td>
+
+                                    <td>
+                                        {{ flight.marketing_carrier }}
+                                    </td>
+
+                                    <td>
+                                        {{ flight.origin }}
+                                        →
+                                        {{ flight.destination }}
+                                    </td>
+
+                                    <td>
+                                        {{ flight.scheduled_departure }}
+                                    </td>
+
+                                    <td>
+                                        {{ flight.scheduled_arrival }}
+                                    </td>
+
+                                    <td>
+
+                                        {% if flight.is_cancelled %}
+
+                                            <span class="status cancelled">
+                                                Cancelled
+                                            </span>
+
+                                        {% elif flight.arrival_delay > 15 %}
+
+                                            <span class="status delayed">
+                                                Delayed
+                                            </span>
+
+                                        {% else %}
+
+                                            <span class="status on-time">
+                                                On Time
+                                            </span>
+
+                                        {% endif %}
+
+                                    </td>
+
+                                </tr>
+
+                            {% endfor %}
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            {% else %}
+
+                <div class="empty-state">
+
+                    <p>
+                        Flights you view will appear here.
+                    </p>
+
+                    <a href="#" class="primary-button">
+                        Browse Flights
+                    </a>
+
+                </div>
+
+            {% endif %}
+
+        </div>
+
+
+        <!-- Quick Actions -->
+        <div class="panel quick-actions-panel">
+
+            <div class="panel-header">
+                <h2>Quick Actions</h2>
+            </div>
+
+            <div class="quick-actions">
+
+                <a href="#" class="quick-action">
+                    <span>⌕</span>
+                    Search Flights
+                </a>
+
+                <a href="#" class="quick-action">
+                    <span>⌘</span>
+                    Explore Routes
+                </a>
+
+                <a href="#" class="quick-action">
+                    <span>▥</span>
+                    View Airlines
+                </a>
+
+                <a href="#" class="quick-action">
+                    <span>⌖</span>
+                    Browse Airports
+                </a>
+
+                <a href="#" class="quick-action">
+                    <span>▮</span>
+                    My Saved Routes
+                </a>
+
+                <a href="#" class="quick-action">
+                    <span>▤</span>
+                    My Notes
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Explore Route Banner -->
+    <section class="route-banner">
+
+        <div>
+
+            <h3>
+                Want to analyze a specific route?
+            </h3>
+
+            <p>
+                Search for an origin and destination to see flight statistics,
+                delay information, and trends.
+            </p>
+
+        </div>
+
+        <a href="#" class="route-button">
+            Explore Routes →
+        </a>
+
+    </section>
+
+</div>
+
+{% endblock %}

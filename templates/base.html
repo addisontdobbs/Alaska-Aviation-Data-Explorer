@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Alaska Aviation Data Explorer{% endblock %}</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/site.css' %}">
+</head>
+
+<body>
+
+<div class="layout">
+
+    <aside class="sidebar">
+        <h2>Alaska Aviation</h2>
+
+        <nav>
+            <a href="/">Dashboard</a>
+            <a href="#">Flights</a>
+            <a href="#">Routes</a>
+            <a href="#">Airlines</a>
+            <a href="#">Airports</a>
+            <a href="#">Saved Routes</a>
+            <a href="#">My Notes</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <h1>{% block page_title %}{% endblock %}</h1>
+        </header>
+
+        {% block content %}
+        {% endblock %}
+
+    </main>
+
+</div>
+
+</body>
+</html>
