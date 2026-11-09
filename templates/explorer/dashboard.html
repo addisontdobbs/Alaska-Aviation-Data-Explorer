@@ -1,260 +1,252 @@
 {% extends "base.html" %}
 
+
 {% block title %}
 Dashboard | Alaska Aviation Data Explorer
 {% endblock %}
 
+
 {% block page_title %}
 {% endblock %}
+
 
 {% block content %}
 
 <div class="dashboard-page">
 
-    <!-- Welcome / Hero Section -->
+
+    <!-- =========================
+         HERO
+         ========================= -->
+
     <section class="dashboard-hero">
 
         <div class="dashboard-hero-text">
-            <h1>Welcome to the Alaska Aviation Data Explorer</h1>
+
+            <h1>
+                Welcome to the Alaska Aviation Data Explorer
+            </h1>
 
             <p>
                 Explore {{ total_flights }} Alaska-related flights from 2025.
                 Search flights, compare routes, analyze delays, and save your
                 own notes for future reference.
             </p>
+
         </div>
 
+
         <div class="dashboard-hero-image">
+
             <div class="image-placeholder">
                 Alaska Aviation
             </div>
+
         </div>
 
     </section>
 
 
-    <!-- KPI Cards -->
+    <!-- =========================
+         STATS
+         ========================= -->
+
     <section class="stats-grid">
 
         <div class="stat-card total-card">
+
             <div class="stat-icon">
                 ✈
             </div>
 
             <div>
-                <h2>{{ total_flights }}</h2>
-                <p>Total Flights</p>
+
+                <h2>
+                    {{ total_flights }}
+                </h2>
+
+                <p>
+                    Total Flights
+                </p>
+
             </div>
+
         </div>
 
 
         <div class="stat-card completed-card">
+
             <div class="stat-icon">
                 ✓
             </div>
 
             <div>
-                <h2>{{ completed_flights }}</h2>
-                <p>Completed Flights</p>
+
+                <h2>
+                    {{ completed_flights }}
+                </h2>
+
+                <p>
+                    Completed Flights
+                </p>
+
             </div>
+
         </div>
 
 
         <div class="stat-card cancelled-card">
+
             <div class="stat-icon">
                 ×
             </div>
 
             <div>
-                <h2>{{ cancelled_flights }}</h2>
-                <p>Cancelled Flights</p>
+
+                <h2>
+                    {{ cancelled_flights }}
+                </h2>
+
+                <p>
+                    Cancelled Flights
+                </p>
+
             </div>
+
         </div>
 
 
         <div class="stat-card delay-card">
+
             <div class="stat-icon">
                 ◷
             </div>
 
             <div>
-                <h2>{{ avg_arrival_delay|floatformat:2 }} min</h2>
-                <p>Average Arrival Delay</p>
+
+                <h2>
+                    {{ avg_arrival_delay|floatformat:2 }} min
+                </h2>
+
+                <p>
+                    Average Arrival Delay
+                </p>
+
             </div>
+
         </div>
 
     </section>
 
 
-    <!-- Main Analytics Row -->
+    <!-- =========================
+         ANALYTICS
+         ========================= -->
+
     <section class="analytics-grid">
 
-        <!-- Flights By Month -->
+
+        <!-- Monthly Flights -->
+
         <div class="panel monthly-panel">
 
             <div class="panel-header">
-                <h2>Flights by Month (2025)</h2>
+
+                <h2>
+                    Flights by Month (2025)
+                </h2>
+
             </div>
 
-            <div class="monthly-chart">
+            <div class="chart-container">
 
-                {% for month in monthly_flights %}
-
-                    <div class="month-row">
-
-                        <div class="month-name">
-                            {% if month.month == 1 %}
-                                Jan
-                            {% elif month.month == 2 %}
-                                Feb
-                            {% elif month.month == 3 %}
-                                Mar
-                            {% elif month.month == 4 %}
-                                Apr
-                            {% elif month.month == 5 %}
-                                May
-                            {% elif month.month == 6 %}
-                                Jun
-                            {% elif month.month == 7 %}
-                                Jul
-                            {% elif month.month == 8 %}
-                                Aug
-                            {% elif month.month == 9 %}
-                                Sep
-                            {% elif month.month == 10 %}
-                                Oct
-                            {% elif month.month == 11 %}
-                                Nov
-                            {% elif month.month == 12 %}
-                                Dec
-                            {% endif %}
-                        </div>
-
-                        <div class="month-bar-container">
-                            <div
-                                class="month-bar"
-                                style="width: {% widthratio month.total 8000 100 %}%;">
-                            </div>
-                        </div>
-
-                        <div class="month-total">
-                            {{ month.total }}
-                        </div>
-
-                    </div>
-
-                {% empty %}
-
-                    <p>No monthly flight data available.</p>
-
-                {% endfor %}
+                <canvas id="monthlyFlightsChart"></canvas>
 
             </div>
 
         </div>
 
 
-        <!-- Top Airlines -->
+        <!-- Airlines -->
+
         <div class="panel airline-panel">
 
             <div class="panel-header">
-                <h2>Top 5 Airlines</h2>
+
+                <h2>
+                    Top 5 Airlines
+                </h2>
+
             </div>
 
-            <div class="airline-list">
+            <div class="chart-container">
 
-                {% for airline in top_airlines %}
-
-                    <div class="airline-row">
-
-                        <div class="airline-name">
-
-                            {% if airline.marketing_carrier == "AS" %}
-                                Alaska Airlines (AS)
-
-                            {% elif airline.marketing_carrier == "DL" %}
-                                Delta (DL)
-
-                            {% elif airline.marketing_carrier == "UA" %}
-                                United (UA)
-
-                            {% elif airline.marketing_carrier == "AA" %}
-                                American (AA)
-
-                            {% elif airline.marketing_carrier == "HA" %}
-                                Hawaiian (HA)
-
-                            {% else %}
-                                {{ airline.marketing_carrier }}
-                            {% endif %}
-
-                        </div>
-
-                        <div class="airline-bar-container">
-
-                            <div
-                                class="airline-bar"
-                                style="width: {% widthratio airline.total total_flights 100 %}%;">
-                            </div>
-
-                        </div>
-
-                        <div class="airline-total">
-                            {{ airline.total }}
-                        </div>
-
-                    </div>
-
-                {% empty %}
-
-                    <p>No airline data available.</p>
-
-                {% endfor %}
+                <canvas id="airlineChart"></canvas>
 
             </div>
 
         </div>
 
 
-        <!-- Top Routes -->
+        <!-- Routes -->
+
         <div class="panel routes-panel">
 
             <div class="panel-header">
-                <h2>Top 5 Routes</h2>
+
+                <h2>
+                    Top 5 Routes
+                </h2>
+
             </div>
+
 
             <table class="dashboard-table">
 
                 <thead>
+
                     <tr>
-                        <th>Route</th>
-                        <th>Total Flights</th>
+
+                        <th>
+                            Route
+                        </th>
+
+                        <th>
+                            Total Flights
+                        </th>
+
                     </tr>
+
                 </thead>
+
 
                 <tbody>
 
                     {% for route in top_routes %}
 
-                        <tr>
-                            <td>
-                                {{ route.origin }}
-                                →
-                                {{ route.destination }}
-                            </td>
+                    <tr>
 
-                            <td>
-                                {{ route.total }}
-                            </td>
-                        </tr>
+                        <td>
+                            {{ route.origin }}
+                            →
+                            {{ route.destination }}
+                        </td>
+
+                        <td>
+                            {{ route.total }}
+                        </td>
+
+                    </tr>
 
                     {% empty %}
 
-                        <tr>
-                            <td colspan="2">
-                                No route data available.
-                            </td>
-                        </tr>
+                    <tr>
+
+                        <td colspan="2">
+                            No route data available.
+                        </td>
+
+                    </tr>
 
                     {% endfor %}
 
@@ -267,39 +259,56 @@ Dashboard | Alaska Aviation Data Explorer
     </section>
 
 
-    <!-- Bottom Dashboard Row -->
+    <!-- =========================
+         BOTTOM DASHBOARD
+         ========================= -->
+
     <section class="bottom-dashboard-grid">
 
+
         <!-- Airport Map -->
+
         <div class="panel map-panel">
 
             <div class="panel-header">
-                <h2>Alaska Airport Map</h2>
-            </div>
 
-            <div class="map-placeholder">
+                <div>
 
-                <div class="map-placeholder-content">
-                    <h3>Alaska Airports</h3>
+                    <h2>
+                        Alaska Airport Map
+                    </h2>
 
-                    <p>
-                        Interactive airport map will be added here.
+                    <p class="panel-subtitle">
+                        Airports represented in the 2025 flight data
                     </p>
+
                 </div>
 
             </div>
 
+
+            <div
+                id="airportMap"
+                aria-label="Interactive map of Alaska airports"
+            ></div>
+
         </div>
 
 
-        <!-- Recently Viewed Flights -->
+        <!-- Recently Viewed -->
+
         <div class="panel recent-panel">
 
             <div class="panel-header">
 
-                <h2>Recently Viewed Flights</h2>
+                <h2>
+                    Recently Viewed Flights
+                </h2>
 
-                <a href="#" class="panel-link">
+                <a
+                    href="#"
+                    class="panel-link"
+                >
                     View All Flights →
                 </a>
 
@@ -308,104 +317,111 @@ Dashboard | Alaska Aviation Data Explorer
 
             {% if recently_viewed_flights %}
 
-                <div class="table-wrapper">
+            <div class="table-wrapper">
 
-                    <table class="dashboard-table">
+                <table class="dashboard-table">
 
-                        <thead>
+                    <thead>
 
-                            <tr>
-                                <th>Date</th>
-                                <th>Flight</th>
-                                <th>Airline</th>
-                                <th>Route</th>
-                                <th>Departure</th>
-                                <th>Arrival</th>
-                                <th>Status</th>
-                            </tr>
+                        <tr>
 
-                        </thead>
+                            <th>Date</th>
+                            <th>Flight</th>
+                            <th>Airline</th>
+                            <th>Route</th>
+                            <th>Departure</th>
+                            <th>Arrival</th>
+                            <th>Status</th>
 
-                        <tbody>
+                        </tr>
 
-                            {% for flight in recently_viewed_flights %}
+                    </thead>
 
-                                <tr>
 
-                                    <td>
-                                        {{ flight.flight_date }}
-                                    </td>
+                    <tbody>
 
-                                    <td>
-                                        {{ flight.marketing_carrier }}
-                                        {{ flight.marketing_flight_number }}
-                                    </td>
+                        {% for flight in recently_viewed_flights %}
 
-                                    <td>
-                                        {{ flight.marketing_carrier }}
-                                    </td>
+                        <tr>
 
-                                    <td>
-                                        {{ flight.origin }}
-                                        →
-                                        {{ flight.destination }}
-                                    </td>
+                            <td>
+                                {{ flight.flight_date }}
+                            </td>
 
-                                    <td>
-                                        {{ flight.scheduled_departure }}
-                                    </td>
+                            <td>
+                                {{ flight.marketing_carrier }}
+                                {{ flight.marketing_flight_number }}
+                            </td>
 
-                                    <td>
-                                        {{ flight.scheduled_arrival }}
-                                    </td>
+                            <td>
+                                {{ flight.marketing_carrier }}
+                            </td>
 
-                                    <td>
+                            <td>
+                                {{ flight.origin }}
+                                →
+                                {{ flight.destination }}
+                            </td>
 
-                                        {% if flight.is_cancelled %}
+                            <td>
+                                {{ flight.scheduled_departure }}
+                            </td>
 
-                                            <span class="status cancelled">
-                                                Cancelled
-                                            </span>
+                            <td>
+                                {{ flight.scheduled_arrival }}
+                            </td>
 
-                                        {% elif flight.arrival_delay > 15 %}
+                            <td>
 
-                                            <span class="status delayed">
-                                                Delayed
-                                            </span>
+                                {% if flight.is_cancelled %}
 
-                                        {% else %}
+                                <span class="status cancelled">
+                                    Cancelled
+                                </span>
 
-                                            <span class="status on-time">
-                                                On Time
-                                            </span>
+                                {% elif flight.arrival_delay > 15 %}
 
-                                        {% endif %}
+                                <span class="status delayed">
+                                    Delayed
+                                </span>
 
-                                    </td>
+                                {% else %}
 
-                                </tr>
+                                <span class="status on-time">
+                                    On Time
+                                </span>
 
-                            {% endfor %}
+                                {% endif %}
 
-                        </tbody>
+                            </td>
 
-                    </table>
+                        </tr>
 
-                </div>
+                        {% endfor %}
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
 
             {% else %}
 
-                <div class="empty-state">
+            <div class="empty-state">
 
-                    <p>
-                        Flights you view will appear here.
-                    </p>
+                <p>
+                    Flights you view will appear here.
+                </p>
 
-                    <a href="#" class="primary-button">
-                        Browse Flights
-                    </a>
+                <a
+                    href="#"
+                    class="primary-button"
+                >
+                    Browse Flights
+                </a>
 
-                </div>
+            </div>
 
             {% endif %}
 
@@ -413,42 +429,89 @@ Dashboard | Alaska Aviation Data Explorer
 
 
         <!-- Quick Actions -->
+
         <div class="panel quick-actions-panel">
 
             <div class="panel-header">
-                <h2>Quick Actions</h2>
+
+                <h2>
+                    Quick Actions
+                </h2>
+
             </div>
+
 
             <div class="quick-actions">
 
-                <a href="#" class="quick-action">
+                <a
+                    href="#"
+                    class="quick-action"
+                >
+
                     <span>⌕</span>
+
                     Search Flights
+
                 </a>
 
-                <a href="#" class="quick-action">
+
+                <a
+                    href="#"
+                    class="quick-action"
+                >
+
                     <span>⌘</span>
+
                     Explore Routes
+
                 </a>
 
-                <a href="#" class="quick-action">
+
+                <a
+                    href="#"
+                    class="quick-action"
+                >
+
                     <span>▥</span>
+
                     View Airlines
+
                 </a>
 
-                <a href="#" class="quick-action">
+
+                <a
+                    href="#"
+                    class="quick-action"
+                >
+
                     <span>⌖</span>
+
                     Browse Airports
+
                 </a>
 
-                <a href="#" class="quick-action">
+
+                <a
+                    href="#"
+                    class="quick-action"
+                >
+
                     <span>▮</span>
+
                     My Saved Routes
+
                 </a>
 
-                <a href="#" class="quick-action">
+
+                <a
+                    href="#"
+                    class="quick-action"
+                >
+
                     <span>▤</span>
+
                     My Notes
+
                 </a>
 
             </div>
@@ -458,7 +521,10 @@ Dashboard | Alaska Aviation Data Explorer
     </section>
 
 
-    <!-- Explore Route Banner -->
+    <!-- =========================
+         ROUTE BANNER
+         ========================= -->
+
     <section class="route-banner">
 
         <div>
@@ -474,12 +540,410 @@ Dashboard | Alaska Aviation Data Explorer
 
         </div>
 
-        <a href="#" class="route-button">
+
+        <a
+            href="#"
+            class="route-button"
+        >
             Explore Routes →
         </a>
 
     </section>
 
+
 </div>
+
+{% endblock %}
+
+
+
+{% block scripts %}
+
+
+<!-- =========================
+     DJANGO DATA
+     ========================= -->
+
+{{ month_labels|json_script:"month-labels" }}
+
+{{ month_counts|json_script:"month-counts" }}
+
+{{ airline_labels|json_script:"airline-labels" }}
+
+{{ airline_counts|json_script:"airline-counts" }}
+
+{{ airport_data|json_script:"airport-data" }}
+
+
+<script>
+
+    /* =========================
+       CHART DATA
+       ========================= */
+
+    const monthLabels = JSON.parse(
+        document.getElementById(
+            "month-labels"
+        ).textContent
+    );
+
+
+    const monthCounts = JSON.parse(
+        document.getElementById(
+            "month-counts"
+        ).textContent
+    );
+
+
+    const airlineLabels = JSON.parse(
+        document.getElementById(
+            "airline-labels"
+        ).textContent
+    );
+
+
+    const airlineCounts = JSON.parse(
+        document.getElementById(
+            "airline-counts"
+        ).textContent
+    );
+
+
+    /* =========================
+       MONTHLY CHART
+       ========================= */
+
+    const monthlyChartElement =
+        document.getElementById(
+            "monthlyFlightsChart"
+        );
+
+
+    if (monthlyChartElement) {
+
+        new Chart(
+            monthlyChartElement,
+            {
+
+                type: "bar",
+
+                data: {
+
+                    labels: monthLabels,
+
+                    datasets: [
+
+                        {
+
+                            label: "Flights",
+
+                            data: monthCounts,
+
+                            backgroundColor:
+                                "#2f86e5",
+
+                            borderColor:
+                                "#2f86e5",
+
+                            borderWidth: 1,
+
+                            borderRadius: 4
+
+                        }
+
+                    ]
+
+                },
+
+
+                options: {
+
+                    responsive: true,
+
+                    maintainAspectRatio: false,
+
+                    plugins: {
+
+                        legend: {
+                            display: false
+                        }
+
+                    },
+
+
+                    scales: {
+
+                        x: {
+
+                            grid: {
+                                display: false
+                            }
+
+                        },
+
+
+                        y: {
+
+                            beginAtZero: true
+
+                        }
+
+                    }
+
+                }
+
+            }
+        );
+
+    }
+
+
+    /* =========================
+       AIRLINE CHART
+       ========================= */
+
+    const airlineChartElement =
+        document.getElementById(
+            "airlineChart"
+        );
+
+
+    if (airlineChartElement) {
+
+        new Chart(
+            airlineChartElement,
+            {
+
+                type: "bar",
+
+                data: {
+
+                    labels: airlineLabels,
+
+                    datasets: [
+
+                        {
+
+                            label: "Flights",
+
+                            data: airlineCounts,
+
+                            backgroundColor:
+                                "#3a7fc2",
+
+                            borderColor:
+                                "#3a7fc2",
+
+                            borderWidth: 1,
+
+                            borderRadius: 4
+
+                        }
+
+                    ]
+
+                },
+
+
+                options: {
+
+                    indexAxis: "y",
+
+                    responsive: true,
+
+                    maintainAspectRatio: false,
+
+                    plugins: {
+
+                        legend: {
+                            display: false
+                        }
+
+                    },
+
+
+                    scales: {
+
+                        x: {
+                            beginAtZero: true
+                        },
+
+
+                        y: {
+
+                            grid: {
+                                display: false
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+        );
+
+    }
+
+
+    /* =========================
+       AIRPORT DATA
+       ========================= */
+
+    const airportData = JSON.parse(
+        document.getElementById(
+            "airport-data"
+        ).textContent
+    );
+
+
+    /* =========================
+       CREATE MAP
+       ========================= */
+
+    const mapElement =
+        document.getElementById(
+            "airportMap"
+        );
+
+
+    if (
+        mapElement &&
+        typeof L !== "undefined"
+    ) {
+
+        const airportMap = L.map(
+            "airportMap"
+        ).setView(
+            [64.2, -152.0],
+            4
+        );
+
+
+        /* =========================
+           OPENSTREETMAP TILES
+           ========================= */
+
+        L.tileLayer(
+            "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+            {
+
+                maxZoom: 18,
+
+                attribution:
+                    '&copy; ' +
+                    '<a href="https://www.openstreetmap.org/copyright">' +
+                    'OpenStreetMap</a>'
+
+            }
+        ).addTo(
+            airportMap
+        );
+
+
+        /* =========================
+           AIRPORT MARKERS
+           ========================= */
+
+        const airportMarkers = [];
+
+
+        airportData.forEach(
+            function(airport) {
+
+                if (
+                    airport.latitude === null ||
+                    airport.longitude === null
+                ) {
+                    return;
+                }
+
+
+                const marker = L.marker(
+                    [
+                        airport.latitude,
+                        airport.longitude
+                    ]
+                );
+
+
+                marker.addTo(
+                    airportMap
+                );
+
+
+                marker.bindPopup(
+                    `
+                    <div class="airport-popup">
+
+                        <strong>
+                            ${airport.code}
+                        </strong>
+
+                        <br>
+
+                        ${airport.name}
+
+                        <br>
+
+                        <span>
+                            ${airport.city}
+                        </span>
+
+                    </div>
+                    `
+                );
+
+
+                airportMarkers.push(
+                    marker
+                );
+
+            }
+        );
+
+
+        /* =========================
+           FIT MAP TO AIRPORTS
+           ========================= */
+
+        if (
+            airportMarkers.length > 0
+        ) {
+
+            const markerGroup =
+                L.featureGroup(
+                    airportMarkers
+                );
+
+
+            airportMap.fitBounds(
+                markerGroup.getBounds(),
+                {
+                    padding: [20, 20]
+                }
+            );
+
+        }
+
+
+        /*
+         * Helps Leaflet recalculate the map
+         * size once the full page has loaded.
+         */
+        window.addEventListener(
+            "load",
+            function() {
+
+                airportMap.invalidateSize();
+
+            }
+        );
+
+    }
+
+
+</script>
 
 {% endblock %}

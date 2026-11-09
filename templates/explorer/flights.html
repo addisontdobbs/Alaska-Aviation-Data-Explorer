@@ -1,0 +1,552 @@
+{% extends "base.html" %}
+
+{% block title %}
+Flights | Alaska Aviation Data Explorer
+{% endblock %}
+
+{% block content %}
+
+<div class="flights-page">
+
+    <div class="page-heading-row">
+
+        <div class="page-heading">
+            <h1>Browse Flights</h1>
+
+            <p>
+                Search and filter 2025 Alaska flight records.
+                Explore delays, routes, and flight status.
+            </p>
+        </div>
+
+        <a
+            href="{% url 'flights' %}"
+            class="clear-filter-button"
+        >
+            Clear Filters
+        </a>
+
+    </div>
+
+
+    <!-- Filters -->
+
+    <section class="panel flights-filter-panel">
+
+        <form
+            method="get"
+            class="flight-filters"
+        >
+
+            <div class="filter-group">
+                <label for="airline">Airline</label>
+
+                <select
+                    id="airline"
+                    name="airline"
+                >
+                    <option value="">
+                        All Airlines
+                    </option>
+
+                    {% for item in airlines %}
+                    <option
+                        value="{{ item }}"
+                        {% if selected_airline == item %}selected{% endif %}
+                    >
+                        {{ item }}
+                    </option>
+                    {% endfor %}
+                </select>
+            </div>
+
+
+            <div class="filter-group">
+                <label for="origin">Origin (From)</label>
+
+                <select
+                    id="origin"
+                    name="origin"
+                >
+                    <option value="">
+                        All Airports
+                    </option>
+
+                    {% for item in origins %}
+                    <option
+                        value="{{ item }}"
+                        {% if selected_origin == item %}selected{% endif %}
+                    >
+                        {{ item }}
+                    </option>
+                    {% endfor %}
+                </select>
+            </div>
+
+
+            <div class="filter-group">
+                <label for="destination">
+                    Destination (To)
+                </label>
+
+                <select
+                    id="destination"
+                    name="destination"
+                >
+                    <option value="">
+                        All Airports
+                    </option>
+
+                    {% for item in destinations %}
+                    <option
+                        value="{{ item }}"
+                        {% if selected_destination == item %}selected{% endif %}
+                    >
+                        {{ item }}
+                    </option>
+                    {% endfor %}
+                </select>
+            </div>
+
+
+            <div class="filter-group">
+                <label for="status">
+                    Cancellation Status
+                </label>
+
+                <select
+                    id="status"
+                    name="status"
+                >
+                    <option value="">
+                        All Flights
+                    </option>
+
+                    <option
+                        value="completed"
+                        {% if selected_status == "completed" %}selected{% endif %}
+                    >
+                        Completed
+                    </option>
+
+                    <option
+                        value="cancelled"
+                        {% if selected_status == "cancelled" %}selected{% endif %}
+                    >
+                        Cancelled
+                    </option>
+                </select>
+            </div>
+
+
+            <div class="filter-group search-filter">
+                <label for="search">Search</label>
+
+                <input
+                    type="text"
+                    id="search"
+                    name="search"
+                    value="{{ search }}"
+                    placeholder="Flight, route, airline..."
+                >
+            </div>
+
+
+            <button
+                type="submit"
+                class="primary-button filter-search-button"
+            >
+                Search Flights
+            </button>
+
+
+            <input
+                type="hidden"
+                name="rows"
+                value="{{ rows_per_page }}"
+            >
+
+        </form>
+
+    </section>
+
+
+    <!-- Main Content -->
+
+    <div class="flights-layout">
+
+
+        <!-- Flight Records -->
+
+        <section class="panel flights-results-panel">
+
+            <div class="panel-header">
+
+                <h2>
+                    Flight Records (2025)
+                </h2>
+
+                {% if result_count %}
+
+                <span class="result-count">
+                    Showing
+                    {{ page_obj.start_index }}–{{ page_obj.end_index }}
+                    of {{ result_count }} flights
+                </span>
+
+                {% endif %}
+
+            </div>
+
+
+            {% if page_obj.object_list %}
+
+            <div class="table-wrapper">
+
+                <table class="dashboard-table">
+
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Airline</th>
+                            <th>Flight #</th>
+                            <th>Route</th>
+                            <th>Dep. Delay</th>
+                            <th>Arr. Delay</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                    {% for flight in page_obj %}
+
+                        <tr>
+
+                            <td>
+                                {{ flight.flight_date|date:"M d, Y" }}
+                            </td>
+
+                            <td>
+                                {{ flight.marketing_carrier }}
+                            </td>
+
+                            <td>
+                                {{ flight.marketing_carrier }}
+                                {{ flight.marketing_flight_number }}
+                            </td>
+
+                            <td>
+                                {{ flight.origin }}
+                                →
+                                {{ flight.destination }}
+                            </td>
+
+                            <td>
+                                {% if flight.is_cancelled %}
+                                    —
+                                {% else %}
+                                    {{ flight.departure_delay|default_if_none:"—" }}
+                                {% endif %}
+                            </td>
+
+                            <td>
+                                {% if flight.is_cancelled %}
+                                    —
+                                {% else %}
+                                    {{ flight.arrival_delay|default_if_none:"—" }}
+                                {% endif %}
+                            </td>
+
+                            <td>
+
+                                {% if flight.is_cancelled %}
+
+                                <span class="status cancelled">
+                                    Cancelled
+                                </span>
+
+                                {% elif flight.arrival_delay > 15 %}
+
+                                <span class="status delayed">
+                                    Delayed
+                                </span>
+
+                                {% else %}
+
+                                <span class="status on-time">
+                                    On Time
+                                </span>
+
+                                {% endif %}
+
+                            </td>
+
+                        </tr>
+
+                    {% endfor %}
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- Pagination -->
+
+            <div class="pagination-bar">
+
+                <div class="page-buttons">
+
+                    {% if page_obj.has_previous %}
+
+                    <a
+                        class="page-button"
+                        href="?page={{ page_obj.previous_page_number }}&rows={{ rows_per_page }}&search={{ search|urlencode }}&airline={{ selected_airline|urlencode }}&origin={{ selected_origin|urlencode }}&destination={{ selected_destination|urlencode }}&status={{ selected_status|urlencode }}"
+                    >
+                        ‹
+                    </a>
+
+                    {% endif %}
+
+
+                    {% for number in page_obj.paginator.page_range %}
+
+                        {% if number >= page_obj.number|add:"-2" and number <= page_obj.number|add:"2" %}
+
+                            {% if number == page_obj.number %}
+
+                            <span class="page-button active">
+                                {{ number }}
+                            </span>
+
+                            {% else %}
+
+                            <a
+                                class="page-button"
+                                href="?page={{ number }}&rows={{ rows_per_page }}&search={{ search|urlencode }}&airline={{ selected_airline|urlencode }}&origin={{ selected_origin|urlencode }}&destination={{ selected_destination|urlencode }}&status={{ selected_status|urlencode }}"
+                            >
+                                {{ number }}
+                            </a>
+
+                            {% endif %}
+
+                        {% endif %}
+
+                    {% endfor %}
+
+
+                    {% if page_obj.has_next %}
+
+                    <a
+                        class="page-button"
+                        href="?page={{ page_obj.next_page_number }}&rows={{ rows_per_page }}&search={{ search|urlencode }}&airline={{ selected_airline|urlencode }}&origin={{ selected_origin|urlencode }}&destination={{ selected_destination|urlencode }}&status={{ selected_status|urlencode }}"
+                    >
+                        ›
+                    </a>
+
+                    {% endif %}
+
+                </div>
+
+
+                <!-- Rows Per Page -->
+
+                <form
+                    method="get"
+                    class="rows-form"
+                >
+
+                    <input
+                        type="hidden"
+                        name="search"
+                        value="{{ search }}"
+                    >
+
+                    <input
+                        type="hidden"
+                        name="airline"
+                        value="{{ selected_airline }}"
+                    >
+
+                    <input
+                        type="hidden"
+                        name="origin"
+                        value="{{ selected_origin }}"
+                    >
+
+                    <input
+                        type="hidden"
+                        name="destination"
+                        value="{{ selected_destination }}"
+                    >
+
+                    <input
+                        type="hidden"
+                        name="status"
+                        value="{{ selected_status }}"
+                    >
+
+
+                    <label for="rows">
+                        Rows per page:
+                    </label>
+
+                    <select
+                        id="rows"
+                        name="rows"
+                        onchange="this.form.submit()"
+                    >
+
+                        <option
+                            value="10"
+                            {% if rows_per_page == 10 %}selected{% endif %}
+                        >
+                            10
+                        </option>
+
+                        <option
+                            value="25"
+                            {% if rows_per_page == 25 %}selected{% endif %}
+                        >
+                            25
+                        </option>
+
+                        <option
+                            value="50"
+                            {% if rows_per_page == 50 %}selected{% endif %}
+                        >
+                            50
+                        </option>
+
+                    </select>
+
+                </form>
+
+            </div>
+
+
+            {% else %}
+
+            <div class="empty-state">
+
+                <h3>
+                    No flights found
+                </h3>
+
+                <p>
+                    Try changing or clearing your filters.
+                </p>
+
+                <a
+                    href="{% url 'flights' %}"
+                    class="primary-button"
+                >
+                    Clear Filters
+                </a>
+
+            </div>
+
+            {% endif %}
+
+        </section>
+
+
+        <!-- Quick Stats -->
+
+        <aside class="flight-sidebar">
+
+            <section class="panel quick-stats-panel">
+
+                <div class="panel-header">
+                    <h2>
+                        Quick Flight Stats
+                    </h2>
+                </div>
+
+
+                <div class="quick-stat">
+
+                    <span class="quick-stat-icon total">
+                        ✈
+                    </span>
+
+                    <div>
+                        <strong>
+                            {{ total_flights }}
+                        </strong>
+
+                        <span>
+                            Total Flights
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="quick-stat">
+
+                    <span class="quick-stat-icon complete">
+                        ✓
+                    </span>
+
+                    <div>
+                        <strong>
+                            {{ completed_flights }}
+                        </strong>
+
+                        <span>
+                            Completed Flights
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="quick-stat">
+
+                    <span class="quick-stat-icon cancel">
+                        ×
+                    </span>
+
+                    <div>
+                        <strong>
+                            {{ cancelled_flights }}
+                        </strong>
+
+                        <span>
+                            Cancelled Flights
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="quick-stat">
+
+                    <span class="quick-stat-icon delay">
+                        ◷
+                    </span>
+
+                    <div>
+                        <strong>
+                            {{ avg_arrival_delay|floatformat:2 }} min
+                        </strong>
+
+                        <span>
+                            Average Arrival Delay
+                        </span>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </aside>
+
+    </div>
+
+</div>
+
+{% endblock %}

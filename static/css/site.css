@@ -14,8 +14,9 @@ body {
     color: #10213d;
 }
 
+
 /* =========================
-   MAIN LAYOUT
+   LAYOUT
    ========================= */
 
 .layout {
@@ -26,16 +27,17 @@ body {
 .sidebar {
     width: 210px;
     min-width: 210px;
+    min-height: 100vh;
+
+    padding: 22px 14px;
+
     background: #102f4c;
     color: white;
-    padding: 22px 14px;
-    min-height: 100vh;
 }
 
 .sidebar h2 {
     margin: 0 10px 25px;
     font-size: 21px;
-    line-height: 1.2;
 }
 
 .sidebar nav {
@@ -45,11 +47,12 @@ body {
 }
 
 .sidebar nav a {
-    display: block;
-    color: #ffffff;
-    text-decoration: none;
     padding: 13px 14px;
     border-radius: 7px;
+
+    color: white;
+    text-decoration: none;
+
     font-size: 15px;
 }
 
@@ -57,52 +60,70 @@ body {
     background: #1d5e9e;
 }
 
-.sidebar nav a:first-child {
+.sidebar nav a.active {
     background: #277bd3;
+}
+
+.sidebar-divider {
+    height: 1px;
+    margin: 12px 6px;
+    background: rgba(255, 255, 255, 0.22);
 }
 
 .main-content {
     flex: 1;
     min-width: 0;
+
     padding: 0 24px 28px;
 }
 
-.topbar {
-    display: none;
-}
 
 /* =========================
-   DASHBOARD
+   PAGE WRAPPERS
    ========================= */
 
-.dashboard-page {
+.dashboard-page,
+.flights-page {
     width: 100%;
     max-width: 1500px;
+
     margin: 0 auto;
 }
 
-/* Hero */
+.flights-page {
+    padding-top: 22px;
+}
+
+
+/* =========================
+   DASHBOARD HERO
+   ========================= */
 
 .dashboard-hero {
     display: grid;
     grid-template-columns: 1fr 355px;
+
     gap: 20px;
+
     align-items: center;
+
     padding: 20px 0 15px;
 }
 
-.dashboard-hero-text h1 {
+.dashboard-hero-text h1,
+.page-heading h1 {
     margin: 0 0 8px;
     font-size: 30px;
-    color: #10213d;
 }
 
-.dashboard-hero-text p {
+.dashboard-hero-text p,
+.page-heading p {
     margin: 0;
+
     color: #60708d;
+
     font-size: 15px;
     line-height: 1.5;
-    max-width: 750px;
 }
 
 .dashboard-hero-image {
@@ -110,23 +131,32 @@ body {
 }
 
 .image-placeholder {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
     height: 100%;
+
     border-radius: 10px;
+
     background:
         linear-gradient(
             rgba(17, 47, 76, 0.15),
             rgba(17, 47, 76, 0.45)
         ),
-        linear-gradient(135deg, #aec9e3, #335f8c);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+        linear-gradient(
+            135deg,
+            #aec9e3,
+            #335f8c
+        );
 
     color: white;
+
     font-size: 22px;
     font-weight: bold;
 }
+
 
 /* =========================
    STAT CARDS
@@ -135,21 +165,24 @@ body {
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+
     gap: 14px;
+
     margin-bottom: 18px;
 }
 
 .stat-card {
     display: flex;
     align-items: center;
+
     gap: 14px;
 
-    border-radius: 10px;
+    min-height: 105px;
+
     padding: 18px;
 
     border: 1px solid #dde5ee;
-    background: white;
-    min-height: 105px;
+    border-radius: 10px;
 }
 
 .stat-card h2 {
@@ -159,20 +192,23 @@ body {
 
 .stat-card p {
     margin: 0;
-    font-size: 14px;
+
     color: #465875;
+
+    font-size: 14px;
 }
 
 .stat-icon {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
     width: 50px;
     height: 50px;
     min-width: 50px;
 
     border-radius: 50%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
     font-size: 24px;
     font-weight: bold;
@@ -214,147 +250,106 @@ body {
     color: #d89b17;
 }
 
+
 /* =========================
    PANELS
    ========================= */
 
 .panel {
-    background: white;
+    padding: 16px;
+
     border: 1px solid #dce4ee;
     border-radius: 10px;
-    padding: 16px;
+
+    background: white;
 }
 
 .panel-header {
     display: flex;
+
     align-items: center;
     justify-content: space-between;
+
     gap: 12px;
+
     margin-bottom: 14px;
 }
 
 .panel-header h2 {
     margin: 0;
     font-size: 18px;
-    color: #10213d;
 }
 
 .panel-link {
     color: #1474dc;
+
     text-decoration: none;
+
     font-size: 13px;
+}
+
+.panel-subtitle,
+.result-count {
+    color: #6b7b90;
+    font-size: 12px;
 }
 
 .analytics-grid {
     display: grid;
+
     grid-template-columns: 1.5fr 1.1fr 0.9fr;
+
     gap: 14px;
+
     margin-bottom: 16px;
 }
 
-/* =========================
-   MONTHLY FLIGHTS
-   ========================= */
-
-.monthly-chart {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.month-row {
-    display: grid;
-    grid-template-columns: 35px 1fr 55px;
-    align-items: center;
-    gap: 10px;
-}
-
-.month-name {
-    color: #54657e;
-    font-size: 12px;
-}
-
-.month-bar-container {
-    height: 18px;
-    background: #edf2f8;
-    border-radius: 4px;
-    overflow: hidden;
-}
-
-.month-bar {
-    height: 100%;
-    min-width: 3px;
-    background: #2785e6;
-    border-radius: 4px;
-}
-
-.month-total {
-    font-size: 12px;
-    text-align: right;
-    color: #33445f;
-}
 
 /* =========================
-   AIRLINES
+   CHARTS
    ========================= */
 
-.airline-list {
-    display: flex;
-    flex-direction: column;
-    gap: 17px;
-    margin-top: 10px;
+.chart-container {
+    position: relative;
+
+    width: 100%;
+    height: 250px;
 }
 
-.airline-row {
-    display: grid;
-    grid-template-columns: 130px 1fr 55px;
-    gap: 9px;
-    align-items: center;
-}
-
-.airline-name {
-    font-size: 12px;
-    text-align: right;
-}
-
-.airline-bar-container {
-    height: 22px;
-    background: #edf2f7;
-    overflow: hidden;
-    border-radius: 3px;
-}
-
-.airline-bar {
-    height: 100%;
-    min-width: 5px;
-    background: #2f79bd;
-}
-
-.airline-total {
-    font-size: 12px;
-}
 
 /* =========================
    TABLES
    ========================= */
 
+.table-wrapper {
+    overflow-x: auto;
+}
+
 .dashboard-table {
     width: 100%;
+
     border-collapse: collapse;
+
     font-size: 13px;
 }
 
 .dashboard-table th {
-    text-align: left;
+    padding: 9px 10px;
+
     background: #edf2f7;
     color: #263a57;
-    padding: 9px 10px;
+
+    text-align: left;
     font-weight: 600;
+
+    white-space: nowrap;
 }
 
 .dashboard-table td {
     padding: 9px 10px;
+
     border-bottom: 1px solid #e5ebf2;
+
     color: #24354e;
 }
 
@@ -362,18 +357,18 @@ body {
     border-bottom: none;
 }
 
-.table-wrapper {
-    overflow-x: auto;
-}
 
 /* =========================
-   BOTTOM GRID
+   DASHBOARD BOTTOM
    ========================= */
 
 .bottom-dashboard-grid {
     display: grid;
+
     grid-template-columns: 0.9fr 1.6fr 0.65fr;
+
     gap: 14px;
+
     margin-bottom: 16px;
 }
 
@@ -381,73 +376,90 @@ body {
     min-height: 340px;
 }
 
-.map-placeholder {
-    height: 275px;
-    border-radius: 8px;
-
-    background:
-        linear-gradient(
-            rgba(220, 240, 250, 0.65),
-            rgba(165, 211, 232, 0.8)
-        );
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.map-placeholder-content {
-    text-align: center;
-    color: #35546f;
-}
-
-.map-placeholder-content h3 {
-    margin: 0 0 6px;
-}
-
-.map-placeholder-content p {
-    margin: 0;
-    font-size: 13px;
-}
-
-/* =========================
-   RECENT FLIGHTS
-   ========================= */
-
 .recent-panel {
     min-width: 0;
 }
 
-.empty-state {
-    min-height: 220px;
+#airportMap {
+    width: 100%;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    height: 320px;
+    min-height: 320px;
 
-    text-align: center;
-    color: #64748b;
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    background: #dceaf3;
 }
 
-.empty-state p {
-    margin-bottom: 15px;
+.leaflet-container {
+    z-index: 1;
+}
+
+.airport-popup {
+    min-width: 130px;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.airport-popup strong {
+    color: #123c63;
+    font-size: 15px;
+}
+
+
+/* =========================
+   BUTTONS / STATUS
+   ========================= */
+
+.primary-button,
+.clear-filter-button,
+.page-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    cursor: pointer;
 }
 
 .primary-button {
-    text-decoration: none;
+    min-height: 40px;
+
+    padding: 9px 14px;
+
+    border: 1px solid #1678df;
+
     background: #1678df;
     color: white;
-    padding: 10px 17px;
-    border-radius: 6px;
+
+    font-size: 13px;
 }
 
-/* Status labels */
+.clear-filter-button {
+    padding: 10px 16px;
+
+    background: #e7f2ff;
+    color: #1474dc;
+
+    font-size: 13px;
+}
 
 .status {
+    display: inline-block;
+
     padding: 5px 9px;
+
     border-radius: 14px;
+
     font-size: 11px;
+
     white-space: nowrap;
 }
 
@@ -466,28 +478,49 @@ body {
     color: #c43b3b;
 }
 
+.empty-state {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 220px;
+
+    color: #64748b;
+
+    text-align: center;
+}
+
+
 /* =========================
    QUICK ACTIONS
    ========================= */
 
 .quick-actions {
     display: flex;
+
     flex-direction: column;
+
     gap: 9px;
 }
 
 .quick-action {
     display: flex;
+
     align-items: center;
+
     gap: 10px;
 
     padding: 11px;
 
-    text-decoration: none;
-    color: #17304f;
+    border-radius: 7px;
 
     background: #f1f6fb;
-    border-radius: 7px;
+    color: #17304f;
+
+    text-decoration: none;
 
     font-size: 13px;
 }
@@ -498,9 +531,12 @@ body {
 
 .quick-action span {
     width: 22px;
+
     text-align: center;
+
     font-size: 18px;
 }
+
 
 /* =========================
    ROUTE BANNER
@@ -508,17 +544,18 @@ body {
 
 .route-banner {
     display: flex;
-    justify-content: space-between;
+
     align-items: center;
+    justify-content: space-between;
 
     gap: 20px;
 
-    background: #eaf4ff;
-    border: 1px solid #d6e8fa;
+    padding: 16px 20px;
 
+    border: 1px solid #d6e8fa;
     border-radius: 9px;
 
-    padding: 16px 20px;
+    background: #eaf4ff;
 }
 
 .route-banner h3 {
@@ -528,21 +565,244 @@ body {
 
 .route-banner p {
     margin: 0;
-    font-size: 13px;
+
     color: #53657c;
+
+    font-size: 13px;
 }
 
 .route-button {
-    background: #1678df;
-    color: white;
-    text-decoration: none;
-
     padding: 11px 22px;
+
     border-radius: 6px;
 
+    background: #1678df;
+    color: white;
+
+    text-decoration: none;
+
     font-size: 13px;
+
     white-space: nowrap;
 }
+
+
+/* =========================
+   FLIGHTS PAGE
+   ========================= */
+
+.page-heading-row {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 18px;
+}
+
+.flights-filter-panel {
+    margin-bottom: 16px;
+}
+
+.flight-filters {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(120px, 1fr))
+        minmax(220px, 1.6fr)
+        auto;
+
+    gap: 12px;
+
+    align-items: end;
+}
+
+.filter-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.filter-group label {
+    color: #42536c;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.filter-group input,
+.filter-group select {
+    width: 100%;
+
+    height: 40px;
+
+    padding: 0 10px;
+
+    border: 1px solid #ccd7e3;
+    border-radius: 6px;
+
+    background: white;
+    color: #1f3048;
+}
+
+.filter-search-button {
+    white-space: nowrap;
+}
+
+.flights-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        250px;
+
+    gap: 16px;
+}
+
+.flight-sidebar {
+    min-width: 0;
+}
+
+
+/* =========================
+   QUICK FLIGHT STATS
+   ========================= */
+
+.quick-stat {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 13px 0;
+
+    border-bottom: 1px solid #e5ebf2;
+}
+
+.quick-stat:last-child {
+    border-bottom: none;
+}
+
+.quick-stat div {
+    display: flex;
+    flex-direction: column;
+}
+
+.quick-stat strong {
+    font-size: 18px;
+}
+
+.quick-stat div span {
+    color: #60708d;
+    font-size: 12px;
+}
+
+.quick-stat-icon {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 8px;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.quick-stat-icon.total {
+    background: #e5f1ff;
+    color: #1474dc;
+}
+
+.quick-stat-icon.complete {
+    background: #dcf6e4;
+    color: #20a453;
+}
+
+.quick-stat-icon.cancel {
+    background: #ffdede;
+    color: #dd3c3c;
+}
+
+.quick-stat-icon.delay {
+    background: #fff0c9;
+    color: #d89b17;
+}
+
+
+/* =========================
+   PAGINATION
+   ========================= */
+
+.pagination-bar {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-top: 18px;
+}
+
+.page-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+.page-button {
+    min-width: 38px;
+    height: 38px;
+
+    padding: 0 10px;
+
+    border: 1px solid #d4deea;
+
+    background: white;
+    color: #27415f;
+}
+
+.page-button.active {
+    border-color: #1678df;
+
+    background: #1678df;
+    color: white;
+}
+
+.rows-form {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #60708d;
+
+    font-size: 13px;
+}
+
+.rows-form select {
+    height: 38px;
+
+    padding: 0 10px;
+
+    border: 1px solid #ccd7e3;
+    border-radius: 6px;
+
+    background: white;
+}
+
 
 /* =========================
    RESPONSIVE
@@ -573,7 +833,20 @@ body {
     .quick-actions-panel {
         grid-column: span 2;
     }
+
+    .flights-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .flight-sidebar {
+        display: none;
+    }
+
+    .flight-filters {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
+
 
 @media (max-width: 900px) {
 
@@ -590,7 +863,12 @@ body {
     .quick-actions-panel {
         grid-column: auto;
     }
+
+    .flight-filters {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
+
 
 @media (max-width: 650px) {
 
@@ -600,6 +878,7 @@ body {
 
     .sidebar {
         width: 100%;
+
         min-width: 0;
         min-height: auto;
     }
@@ -609,16 +888,36 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .sidebar-divider {
+        grid-column: 1 / -1;
+    }
+
     .main-content {
         padding: 0 14px 20px;
     }
 
-    .stats-grid {
+    .stats-grid,
+    .flight-filters {
         grid-template-columns: 1fr;
     }
 
-    .dashboard-hero-text h1 {
+    .page-heading-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dashboard-hero-text h1,
+    .page-heading h1 {
         font-size: 24px;
+    }
+
+    .pagination-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .rows-form {
+        justify-content: space-between;
     }
 
     .route-banner {

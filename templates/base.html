@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Alaska Aviation Data Explorer{% endblock %}</title>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        {% block title %}
+        Alaska Aviation Data Explorer
+        {% endblock %}
+    </title>
 
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/site.css' %}">
+
+    <link
+        rel="stylesheet"
+        href="{% static 'css/site.css' %}"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
 </head>
 
 <body>
@@ -14,24 +33,55 @@
 <div class="layout">
 
     <aside class="sidebar">
-        <h2>Alaska Aviation</h2>
+
+        <h2>
+            Alaska Aviation
+        </h2>
 
         <nav>
-            <a href="/">Dashboard</a>
-            <a href="#">Flights</a>
-            <a href="#">Routes</a>
-            <a href="#">Airlines</a>
-            <a href="#">Airports</a>
-            <a href="#">Saved Routes</a>
-            <a href="#">My Notes</a>
+
+            <a
+                href="{% url 'dashboard' %}"
+                class="{% if request.resolver_match.url_name == 'dashboard' %}active{% endif %}"
+            >
+                Dashboard
+            </a>
+
+            <a
+                href="{% url 'flights' %}"
+                class="{% if request.resolver_match.url_name == 'flights' %}active{% endif %}"
+            >
+                Flights
+            </a>
+
+            <a href="#">
+                Routes
+            </a>
+
+            <a href="#">
+                Airlines
+            </a>
+
+            <a href="#">
+                Airports
+            </a>
+
+            <div class="sidebar-divider"></div>
+
+            <a href="#">
+                My Notes
+            </a>
+
+            <a href="#">
+                Saved Routes
+            </a>
+
         </nav>
+
     </aside>
 
-    <main class="main-content">
 
-        <header class="topbar">
-            <h1>{% block page_title %}{% endblock %}</h1>
-        </header>
+    <main class="main-content">
 
         {% block content %}
         {% endblock %}
@@ -40,5 +90,13 @@
 
 </div>
 
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+{% block scripts %}
+{% endblock %}
+
 </body>
+
 </html>
